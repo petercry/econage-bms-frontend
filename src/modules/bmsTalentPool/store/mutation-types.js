@@ -1,0 +1,2 @@
+export const SET_BASE_DATA = 'SET_BASE_DATA'
+export const SET_BASE_DATA_OBJ= 'SET_BASE_DATA_OBJ'

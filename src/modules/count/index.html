@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>领导驾驶舱</title>
+  </head>
+  <script>
+    window.dataObj = {};
+
+    //高成长行业
+    window.dataObj.char2Array = [];
+    window.dataObj.char2Array.push( {title:'科技业',value:400});
+    window.dataObj.char2Array.push( {title:'农业',value:196});
+    window.dataObj.char2Array.push( {title:'制造业',value:156});
+    window.dataObj.char2Array.push( {title:'快递',value:135});
+    window.dataObj.char2Array.push( {title:'冷冻',value:96});
+    window.dataObj.char2Array.push( {title:'电商',value:77});
+    window.dataObj.char2Array.push( {title:'直播',value:53});
+    window.dataObj.char2Array.push( {title:'新媒体',value:22});
+
+    //全区年报
+    window.dataObj.char3Array = [];
+    window.dataObj.char3Array.push( {name:'企业',max:3500,value:1185});
+    window.dataObj.char3Array.push( {name:'个体',max:3200,value:2011});
+    window.dataObj.char3Array.push( {name:'其他',max:30000,value:24737});
+
+    //主体增长趋势
+    window.dataObj.char5Array = [100, 120, 40, 60, 100, 50, 200];
+
+    //企业年龄
+    window.dataObj.char6Array = [];
+    window.dataObj.char6Array.push({value: 700, name: '1年以下'});
+    window.dataObj.char6Array.push({value: 300, name: '1-3年'});
+    window.dataObj.char6Array.push({value: 1048, name: '3-5年'});
+    window.dataObj.char6Array.push({value: 580, name: '5-10年'});
+    window.dataObj.char6Array.push({value: 484, name: '10年以上'});
+
+    //片区主体数量排行榜
+    window.dataObj.char7NameArray = ['德城区','禹城市','乐陵市','齐河县','陵  县','临邑县','平原县','武城县','夏津县','庆云县'];
+    window.dataObj.char7ValueArray = [1000,900, 900,865, 826, 808, 756, 720,700,700];
+
+
+    //异常企业分布及占比
+    window.dataObj.char8ValueArray = [];
+    window.dataObj.char8ValueArray.push({name:'庆云县',d1:180,d2:'0.000186%'});
+    window.dataObj.char8ValueArray.push({name:'乐陵市',d1:121,d2:'0.0003%'});
+    window.dataObj.char8ValueArray.push({name:'宁津县',d1:124,d2:'0.002749%'});
+    window.dataObj.char8ValueArray.push({name:'陵城区',d1:89,d2:'0.000187%'});
+    window.dataObj.char8ValueArray.push({name:'临邑县',d1:66,d2:'0.000125%'});
+    window.dataObj.char8ValueArray.push({name:'运河经济开发区',d1:15,d2:'0.000075%'});
+    window.dataObj.char8ValueArray.push({name:'经济技术开发区',d1:43,d2:'0.000098%'});
+    window.dataObj.char8ValueArray.push({name:'德城区',d1:47,d2:'0.000045%'});
+    window.dataObj.char8ValueArray.push({name:'武城县',d1:86,d2:'0.000076%'});
+    window.dataObj.char8ValueArray.push({name:'夏津县',d1:48,d2:'0.000064%'});
+    window.dataObj.char8ValueArray.push({name:'平原县',d1:62,d2:'0.000068%'});
+    window.dataObj.char8ValueArray.push({name:'禹城市',d1:89,d2:'0.000076%'});
+    window.dataObj.char8ValueArray.push({name:'齐河县',d1:44,d2:'0.000066%'});
+
+
+
+
+
+
+    window.dataObj2 = {};
+    //重点监管企业
+    window.dataObj2.char1NameArray = ['中胜涂料','天邦农化','实华化工','正义农药厂','银星化工','正义农药厂'];
+    window.dataObj2.char1ValueArray = [1026, 865, 826, 808, 756, 720];
+
+    //投诉热点企业
+    window.dataObj2.char2NameArray = ['鑫荣气化','永安气体厂','盛德源化工','国泰生物','银星化工','德化化工'];
+    window.dataObj2.char2ValueArray = [10, 8, 8, 7, 3, 1];
+
+    //主体数量分类统计
+    window.dataObj2.char3Array = [];
+    window.dataObj2.char3Array.push({name:'分类1',value:10});
+    window.dataObj2.char3Array.push({name:'分类2',value:20});
+    window.dataObj2.char3Array.push({name:'分类3',value:30});
+    window.dataObj2.char3Array.push({name:'分类4',value:40});
+    window.dataObj2.char3Array.push({name:'分类5',value:50});
+
+    //主体分类趋势分析
+    window.dataObj2.char4Array = [];
+    window.dataObj2.char4Array.push({name:'分类1',value:[220, 182, 191, 134, 250, 120, 110, 125, 145, 122, 165, 122]});
+    window.dataObj2.char4Array.push({name:'分类2',value:[120, 110, 125, 145, 122, 165, 122, 220, 282, 191, 134, 150]});
+    window.dataObj2.char4Array.push({name:'分类3',value:[220, 182, 325, 145, 122, 191, 134, 150, 120, 110, 165, 122]});
+
+    //信用等级变化动态情况
+    window.dataObj2.char5Array = [];
+    window.dataObj2.char5Array.push({name:'7月17日，XXXXXXXXXX,XXXXXXXXXX,信用等级将为B级',type:1});
+    window.dataObj2.char5Array.push({name:'7月17日，XXXXXXXXXX,XXXXXXXXXX,信用等级将为B级',type:1});
+    window.dataObj2.char5Array.push({name:'7月17日，XXXXXXXXXX,XXXXXXXXXX,信用等级将为B级',type:1});
+    window.dataObj2.char5Array.push({name:'7月17日，XXXXXXXXXX,XXXXXXXXXX,信用等级将为B级',type:2});
+    window.dataObj2.char5Array.push({name:'7月17日，XXXXXXXXXX,XXXXXXXXXX,信用等级将为B级',type:2});
+
+    //重点监管行业
+    window.dataObj2.char6Obj = {
+          "建筑业": 22199,
+          "软件和信息": 10288,
+          "专业技术服务": 620,
+          "科技推广": 274470,
+          "文化艺术业": 12311,
+          "商务服务业": 1206,
+          "农 林 木": 4885,
+          "制造业": 32294,
+          "生态": 32294,
+          "电商": 32294,
+          "新媒体": 32294,
+          "直播": 32294,
+          "记者": 32294,
+    };
+
+
+
+
+  </script>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

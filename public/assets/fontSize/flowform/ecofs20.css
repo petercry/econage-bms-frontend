@@ -1,0 +1,215 @@
+html .ecofs20 {
+    font-size: 20px;
+}
+.ecofs20 .flow-card>.title{
+    font-size: 20px !important;
+    height: 36px;
+    line-height: 36px;
+}
+
+.ecofs20 .flow-card .el-collapse-item__header{
+    font-size: 20px;
+    height: 36px;
+    line-height: 36px;
+}
+
+.ecofs20 .eco-tool-title{
+    font-size: 20px !important;
+}
+
+.ecofs20 .wfStartVue .flow-item{
+    font-size: 20px;    
+    height: 36px;
+    line-height: 36px;
+}
+
+
+.ecofs20 .flowlist.el-table td, .flowlist.el-table th{
+    font-size: 20px;
+    padding:10px 0px !important;
+}
+
+.ecofs20 .flowlist .taskName{
+    font-size: 18px;
+}
+
+.ecofs20 .flowlist.el-table th.is-leaf{
+    font-size: 20px;
+}
+.ecofs20 .el-pagination button, .el-pagination span:not([class*=suffix]){
+    font-size: 19px;
+}
+.ecofs20 .el-pagination__sizes .el-input .el-input__inner{
+    font-size: 19px;
+}
+
+/*启动流程*/
+.ecofs20 .wfStart .cardTitle{
+    font-size: 20px !important;
+}
+.ecofs20 .wfStart .cardTitle .subTitle{
+    font-size: 20px !important;
+}
+.ecofs20 .wfStart .cardCol .cardSubDesc{
+    font-size: 18px;
+}
+.ecofs20 .el-tabs__item{
+    font-size: 20px;
+}
+.ecofs20 .wfStart .quicklist{
+    font-size: 20px !important;
+}
+.ecofs20 .el-button--mini,.ecofs20 .el-button--small{
+    font-size: 18px !important;
+}
+.ecofs20 .h-button{
+    font-size: 18px;
+}
+
+.ecofs20 .m-header .m-title{
+    font-size: 20px;
+}
+
+/*待办流程列表*/
+.ecofs20 .relevanceFlowVue .searchBox{
+    font-size: 20px;
+    height: 105px;
+}
+
+.ecofs20 .relevanceFlowVue .searchBox .searchDesc{
+    width:100px;
+}
+
+.ecofs20 .relevanceFlowVue .state{
+    width:130px;
+}
+
+.ecofs20 .relevanceFlowVue .itemInput{
+    width:170px;
+}
+
+/*待办流程详情*/
+.ecofs20 .flowFormVue .el-input__inner{
+    font-size: 20px;
+}
+.ecofs20 .flowFormVue .el-textarea__inner{
+    font-size: 20px;
+}
+.ecofs20 .el-radio__label{
+    font-size: 20px;
+}
+.ecofs20 .flowFormVue .el-checkbox__label{
+    font-size: 20px;
+}
+.ecofs20 .wfDetailToolbar .toolbar{
+    font-size: 20px !important;
+}
+.ecofs20 .wfDetailToolbar .taskDesc{
+    font-size: 18px !important;
+}
+
+.ecofs20 .handelForm .formTitle{
+    font-size: 20px !important;
+}
+
+
+
+/*流程查看*/
+.ecofs20 .toview .searchBox{
+    font-size: 20px;
+    height: 105px;
+}
+
+.ecofs20 .toview .searchBox .searchDesc{
+    width:100px;
+}
+
+.ecofs20 .el-input__inner{
+    font-size: initial;
+}
+
+/*流程监控*/
+.ecofs20 .relevanceFlowVue .searchBox .searchDesc{
+    width:100px;
+}
+
+.ecofs20 .el-checkbox__label{
+    font-size: 20px;
+}
+
+/*流程模版*/
+.ecofs20 .el-dropdown{
+    font-size: 20px;
+}
+
+.ecofs20 .el-dropdown-menu--small .el-dropdown-menu__item{
+    font-size: 19px;
+}
+
+.ecofs20 .el-cascader-panel{
+    font-size: 20px;
+}
+
+
+/*流程设计*/
+.ecofs20 .flowFormStep .ecoStep .el-step.is-simple .el-step__title{
+    font-size: 18px;
+}
+.ecofs20 .designFormSettingVue .itemVueName,
+.ecofs20 .ecoSettingDesc .title,
+.ecofs20 .designFormSettingVue .plainBtn,
+.ecofs20 .designInputSettingVue .itemVueName,
+.ecofs20 .ecoSettingDesc .switchDesc
+{
+    font-size: 20px !important;
+}
+
+.ecofs20 .el-radio-button--small .el-radio-button__inner{
+    font-size: 16px;
+    padding: 9px 12px;
+}
+
+.ecofs20 .designSettingVue .tip{
+    font-size: 14px !important;
+}
+
+.ecofs20 .designForm .formTitle{
+    font-size: 20px !important;
+}
+
+.ecofs20 .el-form-item__label{
+    font-size: 20px;
+}
+
+.ecofs20 .el-form-item__content{
+    font-size: 20px;
+}
+
+.ecofs20 .formContentVue .moduleDesc{
+    font-size: 18px !important;
+}
+.ecofs20 .list-group-item{
+    font-size: 15px !important;
+}
+.ecofs20 .flowFormStep .leftCol{
+    font-size: 20px !important;
+}
+
+.ecofs20 .ecoFieldLabel{
+    line-height: 26px !important;
+}
+
+
+.ecofs20 .wfMatterGuidePage .pageTitle .title{
+    font-size:22px !important;
+}
+
+.ecofs20 .wfMatterGuidePage .pageTitle .desc,
+.ecofs20 .wfMatterGuidePage .service-table th,
+.ecofs20 .wfMatterGuidePage .service-table td{
+    font-size: 20px !important;
+}
+
+.ecofs20 .wfMatterGuidePage .dtHasLabel{
+    font-size: 19px !important;
+}

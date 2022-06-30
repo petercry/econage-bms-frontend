@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <title></title>
+    <script src="https://g.alicdn.com/dingding/dinglogin/0.0.5/ddLogin.js"></script>
+    <script>
+      window.sysSetting = {
+          "theme":'BLUEALL',
+          "hidePassLogin":false,//隐藏密码登陆
+          "headTitle":"", //管理页head设置
+          "headLogoShow":true,
+          "headLogoURL":"/static/img/aflogo.png",
+          "headLogoStyle":{
+              "marginTop":'-10px'
+          },
+          "togglePosition":'left',
+          "iconMore":[],
+          "homeType":"nonePage",
+          // "homeUrl":"/portalIndex/#/",
+          "backUrl":"portal/#/serviceList",
+          "sysAdminRoleId":'HZYH-SYS-ADMIN',
+          "webPlatform":false,
+          "layout":{
+              "asideWidth":160, //左侧菜单宽度
+              "asideHidden":true, //是否隐藏左侧菜单
+          },
+          "sessionValidAction":"dialog", //登录失效操作 默认为退出到登录页，dialog为 弹窗
+      }
+    </script>
+
+    <script>
+      document.write("<script type='text/javascript' src='./ecoSetting.js?v=" + Date.now() + "'><\/script>");
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+<mxGraphModel dx="1668" dy="1142" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <mxCell id="workflow" value="流程组" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#003fab;gradientColor=#001c5e;shadow=1;fontSize=18;fontColor=#FFFFFF;container=1;labelPosition=center;verticalLabelPosition=middle;verticalAlign=top;spacingTop=10;fontStyle=1;recursiveResize=0;allowArrows=0;" parent="1" vertex="1">
+      <mxGeometry x="-320" y="130" width="660" height="760" as="geometry" />
+    </mxCell>
+  </root>
+</mxGraphModel>

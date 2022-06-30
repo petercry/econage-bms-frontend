@@ -1,0 +1,11 @@
+export const SET_LOGIN_USER = 'SET_LOGIN_USER'
+export const SET_MENU_TAB_CLICK = 'SET_MENU_TAB_CLICK'
+export const SET_MENU_TAB_ARRAY = 'SET_MENU_TAB_ARRAY'
+export const SET_TOGGLE_MENU = 'SET_TOGGLE_MENU'
+export const SET_TOGGLE_FLAG = 'SET_TOGGLE_FLAG'
+export const SET_SYS_WIDTH = 'SET_SYS_WIDTH'
+export const SET_THEME = 'SET_THEME'
+export const SET_LANGUAGE = 'SET_LANGUAGE'
+export const SET_TEMP_OBJ = 'SET_TEMP_OBJ'
+export const SET_DOCUMENT_READY = 'SET_DOCUMENT_READY'
+

@@ -1,0 +1,24 @@
+.custom-default .ecoHeader{
+  color:#fff !important;
+}
+
+.custom-default .el-menu--horizontal>.el-submenu .el-submenu__title{
+  color:#fff;
+}
+
+.custom-default .el-menu--horizontal>.el-menu-item.is-active, 
+.custom-default .el-menu--horizontal>.el-menu-item{
+  color:#fff;
+}
+
+.custom-default .el-menu--horizontal>.el-menu-item.is-active:hover, 
+.custom-default .el-menu--horizontal>.el-menu-item:hover{
+  color:#fff;
+}
+
+.custom-default .el-menu--horizontal>.el-menu-item.is-active:hover, 
+.custom-default .el-menu--horizontal>.el-menu-item:hover{
+  color:#fff;
+}
+
+

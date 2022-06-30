@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <title>机关内部最多跑一次</title>
+    <link rel="stylesheet" type="text/css" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <script src="https://g.alicdn.com/dingding/dinglogin/0.0.5/ddLogin.js"></script>
+  </head>
+  <body>
+
+    <div id="root"></div>
+    <script>
+      function _open(v1,_title,_width,_height,url,v2,v3,v4,v5,_top){
+          window.sysvm._open(v1,_title,_width,_height,url,v2,v3,v4,v5,_top);
+      }
+      function _close(){
+          window.sysvm._close();
+      }
+      function showTopFormContent(wf_id){
+      	  window.sysvm.showTopFormContent(wf_id);
+      }
+      function clickButton1(){
+          window.sysvm.clickButton1();
+      }
+      function clickMsgButton(action,type_id,id,tabName,wfId){
+          window.sysvm.clickMsgButtonFunc(action,type_id,id,tabName,wfId);
+      }
+    </script>
+  </body>
+</html>

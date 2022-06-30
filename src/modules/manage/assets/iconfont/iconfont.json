@@ -1,0 +1,296 @@
+{
+  "id": "1987746",
+  "name": "E10-Manage",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "578996",
+      "name": "添加",
+      "font_class": "tianjia-copy",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "1025631",
+      "name": "添加",
+      "font_class": "tianjia1",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "7556172",
+      "name": "确定",
+      "font_class": "queding",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "12588369",
+      "name": "删除筛选项",
+      "font_class": "chushaixuanxiang",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "14513234",
+      "name": "编 辑",
+      "font_class": "bianji",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "9857726",
+      "name": "省略号",
+      "font_class": "shenglvehao",
+      "unicode": "e834",
+      "unicode_decimal": 59444
+    },
+    {
+      "icon_id": "9114432",
+      "name": "85排序",
+      "font_class": "paixu1",
+      "unicode": "e649",
+      "unicode_decimal": 58953
+    },
+    {
+      "icon_id": "2593577",
+      "name": "排序",
+      "font_class": "paixu",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "6560987",
+      "name": "添加",
+      "font_class": "tianjia",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "142100",
+      "name": "turned-in",
+      "font_class": "turnedin",
+      "unicode": "e8f0",
+      "unicode_decimal": 59632
+    },
+    {
+      "icon_id": "142101",
+      "name": "turned-in-not",
+      "font_class": "turnedinnot",
+      "unicode": "e8f1",
+      "unicode_decimal": 59633
+    },
+    {
+      "icon_id": "772240",
+      "name": "HR 人事 人事管理 380%",
+      "font_class": "rsgl",
+      "unicode": "e67e",
+      "unicode_decimal": 59006
+    },
+    {
+      "icon_id": "982596",
+      "name": "图表",
+      "font_class": "tubiao",
+      "unicode": "e670",
+      "unicode_decimal": 58992
+    },
+    {
+      "icon_id": "1010133",
+      "name": "服务",
+      "font_class": "qtfw",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "1013103",
+      "name": "进度8",
+      "font_class": "circle",
+      "unicode": "e67a",
+      "unicode_decimal": 59002
+    },
+    {
+      "icon_id": "1157313",
+      "name": "时间 00",
+      "font_class": "shijian00",
+      "unicode": "e6ce",
+      "unicode_decimal": 59086
+    },
+    {
+      "icon_id": "1167157",
+      "name": "港澳台",
+      "font_class": "ygfga",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "1172719",
+      "name": "审核",
+      "font_class": "shzb",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "1262944",
+      "name": "荣誉",
+      "font_class": "rongyu",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "1517010",
+      "name": "选中",
+      "font_class": "xuanzhong",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    },
+    {
+      "icon_id": "1591694",
+      "name": "半圆选框",
+      "font_class": "banyuan",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "3759064",
+      "name": "出国",
+      "font_class": "ygcg",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "3769199",
+      "name": "支付",
+      "font_class": "czzf",
+      "unicode": "e8f9",
+      "unicode_decimal": 59641
+    },
+    {
+      "icon_id": "4250711",
+      "name": "男",
+      "font_class": "nan",
+      "unicode": "e6c2",
+      "unicode_decimal": 59074
+    },
+    {
+      "icon_id": "4250713",
+      "name": "女",
+      "font_class": "nv",
+      "unicode": "e6c3",
+      "unicode_decimal": 59075
+    },
+    {
+      "icon_id": "4562430",
+      "name": "没选中",
+      "font_class": "meixuanzhong",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "4661644",
+      "name": "圆",
+      "font_class": "yuan",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "5175711",
+      "name": "跑步",
+      "font_class": "paobu",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "6321263",
+      "name": "审批",
+      "font_class": "hzsp",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "6364167",
+      "name": "二维码",
+      "font_class": "ico",
+      "unicode": "e646",
+      "unicode_decimal": 58950
+    },
+    {
+      "icon_id": "6539848",
+      "name": "办理",
+      "font_class": "bwbh",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "7501119",
+      "name": "登记处",
+      "font_class": "djba",
+      "unicode": "e66f",
+      "unicode_decimal": 58991
+    },
+    {
+      "icon_id": "8102696",
+      "name": "卡片",
+      "font_class": "apec",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "9512603",
+      "name": "握手",
+      "font_class": "yqwgrlh",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "10060845",
+      "name": "荣誉",
+      "font_class": "rypx",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "11487986",
+      "name": "bad",
+      "font_class": "bad",
+      "unicode": "e745",
+      "unicode_decimal": 59205
+    },
+    {
+      "icon_id": "11488053",
+      "name": "good",
+      "font_class": "good",
+      "unicode": "e753",
+      "unicode_decimal": 59219
+    },
+    {
+      "icon_id": "11488229",
+      "name": "bad-fill",
+      "font_class": "bad-fill",
+      "unicode": "e779",
+      "unicode_decimal": 59257
+    },
+    {
+      "icon_id": "11488262",
+      "name": "good-fill",
+      "font_class": "good-fill",
+      "unicode": "e780",
+      "unicode_decimal": 59264
+    },
+    {
+      "icon_id": "13106266",
+      "name": "建筑建材",
+      "font_class": "dept",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "14197410",
+      "name": "后勤管理-01",
+      "font_class": "zhhq",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    }
+  ]
+}

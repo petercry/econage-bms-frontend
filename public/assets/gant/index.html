@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>甘特图</title>
+    <link href="./miniui/themes/default/miniui.css" rel="stylesheet" type="text/css"/>
+    <link href="./miniui/themes/blue/skin.css" rel="stylesheet" type="text/css"/>
+    <link href="./miniui/themes/icons.css" rel="stylesheet" type="text/css"/>
+    <link href='./css/eco-style.css?v=34' rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery-1.8.1.min.js"></script>
+    <script type="text/javascript" src="./miniui/miniui.js"></script>
+    <script type="text/javascript" src="./miniui/locale/zh_CN.js"></script>
+    <script type="text/javascript" src="./plusgantt/GanttMenu.js"></script>
+    <script type="text/javascript" src="./plusgantt/GanttService.js"></script>
+    <script type="text/javascript" src="./plusgantt/GanttSchedule.js"></script>
+    <script type="text/javascript" src="./lib/jquery.PrintArea.js"></script>
+  </head>
+  <body>
+     <div id="renderGantt">
+
+     </div>
+     <script>
+      var project,highLightItem;
+      const _getTimeScaleNextDate = mini.GanttView.prototype.getTimeScaleNextDate;
+      const el = $("#renderGantt")[0];
+      const container = $("#renderGantt");
+      $(function(){
+        project = CreateGantt();
+        if(_option.style){
+          project.setStyle(_option.style);
+        }
+        console.log(project)
+        if(Object.prototype.hasOwnProperty.call(_option,'readonly')){
+          project.setReadOnly(_option.readonly);
+        }
+        if(Object.prototype.hasOwnProperty.call(_option,'showSummary')){
+          project.ganttView.showSummary = _option.showSummary;
+        }
+        if(Object.prototype.hasOwnProperty.call(_option,'allowDragDrop')){
+          console.log(_option.allowDragDrop)
+          project.setAllowDragDrop(_option.allowDragDrop);
+        }
+        if(Object.prototype.hasOwnProperty.call(_option,'autoSyncSummary')){
+          project.autoSyncSummary = _option.autoSyncSummary;
+        }
+        if(Object.prototype.hasOwnProperty.call(_option,'showGanttView')){
+          project.setShowGanttView(_option.showGanttView);
+        }
+        if(Object.prototype.hasOwnProperty.call(_option,'showTableView')){
+          project.setShowTableView(_option.showTableView);
+        }
+        if(Object.prototype.hasOwnProperty.call(_option,'showLinkLines')){
+          project.setShowLinkLines(_option.showLinkLines);
+        }
+        if(Object.prototype.hasOwnProperty.call(_option,'columns')){
+          const array = Object.assign([], _option.columns);
+          project.setColumns(array);
+        }
+        if(Object.prototype.hasOwnProperty.call(_option,'treeColumn')){
+          project.setTreeColumn(_option.treeColumn);
+        }
+        if(Object.prototype.hasOwnProperty.call(_option,'bottomTimeScale')){
+          project.setBottomTimeScale(_option.bottomTimeScale);
+        }
+        if(Object.prototype.hasOwnProperty.call(_option,'topTimeScale')){
+          project.setTopTimeScale(_option.topTimeScale);
+        }
+        if(_option.tableViewWidth){
+          project.setTableViewWidth(_option.tableViewWidth);
+        }
+        if(Object.prototype.hasOwnProperty.call(_option,'topTimeScale')){
+          project.setTopTimeScale(_option.topTimeScale);
+        }
+        if(Object.prototype.hasOwnProperty.call(_option,'bottomTimeScale')){
+          project.setBottomTimeScale(_option.bottomTimeScale);
+        }
+        project.setTreeColumn('name');
+        project.tableView.setHeaderHeight(50);
+        project.ganttView.setHeaderHeight(50);
+        project.allowLinkBars = false;
+        if(_option.showTimeLineLabelInHeader){
+
+          project.tableView.setHeaderHeight(70);
+          project.ganttView.setHeaderHeight(70);
+          project.ganttView.headerCellRenderer = function(event){
+              if(event.position == "bottom"){
+                  var startDate = event.date,
+                      bType = event.timescale.type,
+                      bNumber = event.timescale.number;
+                  var endDate = _getTimeScaleNextDate(startDate, bType, bNumber);
+                  var exceptedTimeLine = _getTimeLineByDateRange(startDate,endDate);
+                  if(exceptedTimeLine){
+                      event.html =
+                          "<div class='plusgantt-header-timeline-label' " +
+                          " style='line-height:13px;text-overflow: clip;' " +
+                          " title='" +exceptedTimeLine.text+ "'" +
+                          "></div>"+
+                          "<div style='line-height:13px;'>"+event.html+"</div>";
+                  }
+              }
+          }
+        }
+        // if(_option.readonly){
+        //   project.setReadOnly(_option.readonly);
+        // }
+        project.render(el);
+        project.on('itemtooltipneeded', function (e) {
+            var task = e.task;
+            e.tooltip = "<div>任务：" + task.Name + "</div>"
+            //                +   "<div ><div style='float:left;'>进度：<b>"+task.PercentComplete + "%</b></div>"
+            //                +   "<div style='float:right;'>工期："+task.Duration + "日</div></div>"
+                        + "<div style='clear:both;'>计划开始时间：" + mini.formatDate(task.Start, 'yyyy-MM-dd') + "</div>"
+                        + "<div>计划完成时间：" + mini.formatDate(task.Finish, 'yyyy-MM-dd') + "</div>";
+        });
+        //自定义条形图外观显示
+        project.on("drawitem", function (e) {
+          e.itemCls = "mini-work-item";
+          if(e.item._selected){
+              e.itemCls += ' plusgantt-item-selected';
+          }
+
+
+        });
+
+        project.on("drawcell", function (e) {
+          
+          if (e.column.field == "Name" && e.record.Summary) {
+              e.cellHtml = '<b>' + e.cellHtml + '</b>';
+          }
+          if (e.column.field == "Start" || e.column.field == "Finish"||e.column.field == "actualEndDate") {
+              var d = e.value;
+              if (d) {
+                  e.cellHtml = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+              }
+          }
+          if (e.column.field == "PredecessorLink") {
+              e.cellHtml = project.getLinkString(e.value);
+          }
+          _option.onDrawcell(e);
+        });
+        //--------------------事件处理
+        project.on("itemdragstart", function (e) {
+          _option.onItemdragstart(e);
+        });
+        if(_option.onItemDragComplete){
+            project.on("itemdragcomplete", function (e) {
+              _option.onItemDragComplete(e);
+            });
+        }
+        project.on('taskclick', function(e){
+            _scroll2View(e.task.UID);
+            _option.onTaskclick(e);
+        });
+        project.on('taskdblclick', function(e){
+          _option.onTaskdblclick(e);
+        });
+        project.on("expandtask", function (e) {
+          _option.onExpandtask(e);
+        });
+        project.on('itemdragstart', onItemdragstart);
+        window._addTask = function(row){
+          project.addTask(row);
+        }
+        window._editPlan = function(id){
+          console.log(_option)
+          _option.editPlan(id);
+        }
+        window._loadData = function(rows = []){
+          const tree = mini.arrayToTree(rows,'children','id','parentId');
+          project.loadTasks(tree);
+          project.collapseAll();
+        }
+        window._zoomIn = function(){
+          project.zoomIn();
+        }
+        window._zoomOut = function(){
+          project.zoomOut();
+        }
+        window._expandAll = function(){
+          project.expandAll();
+        }
+        window._collapseAll = function(){
+          project.collapseAll();
+        }
+
+        window._setTimeLines = function(timeLines){
+
+            //排序时间线
+            timeLines.sort(function (pre,next) {
+                if(!pre.date){
+                    return -1;
+                }else if(!next.date){
+                    return 1;
+                }
+                return pre.date.getTime()-next.date.getTime();
+            });
+            project.setTimeLines(timeLines);
+        }
+
+        _onClose();
+
+      })
+      function _scroll2View(taskId){
+
+        var selectedTask = project.getTask(taskId);
+        if(selectedTask){
+            project.scrollIntoView(selectedTask);
+            _highLightItemBar(selectedTask);
+        }
+      }
+      function _highLightItemBar(innerTask){
+
+
+        if(!_option.highLightOnItemClick){
+            return;
+        }
+
+        var ganttViewBarsRef = container.find("div.mini-ganttview-bars");
+        if(highLightItem){
+            project.updateTask(highLightItem, "_selected", false);
+            ganttViewBarsRef.find("#"+highLightItem._id+".mini-gantt-item")
+                .removeClass("plusgantt-item-selected");
+        }
+
+        ganttViewBarsRef.find("#"+innerTask._id+".mini-gantt-item").addClass("plusgantt-item-selected");
+        project.updateTask(innerTask, "_selected", true);
+        highLightItem = innerTask;
+    }
+
+    function _getTimeLineByDateRange(start,end){
+        var timeLines = project.timeLines,
+            startTimestamp = start.getTime(),
+            endTimestamp = end.getTime(),
+            timeLine,timeLineTimestamp;
+
+            if(timeLines && timeLines.length > 0 ){
+                for(var i=0,l=timeLines.length;i<l;i++){
+                    timeLine = timeLines[i];
+                    if(!timeLine.date){
+                        continue;
+                    }
+                    timeLineTimestamp = timeLine.date.getTime();
+                    if(timeLineTimestamp>=startTimestamp&&timeLineTimestamp<endTimestamp){
+                        return timeLine;
+                    }
+                }
+            }
+
+    }
+    function onItemdragstart(e){
+      //禁止拉伸任务项
+      e.cancel = true;
+    }
+    </script>
+  </body>
+</html>

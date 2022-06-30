@@ -1,0 +1,95 @@
+html .ecofs20 {
+    font-size: 20px;
+}
+
+.ecofs20 .eco-tool-title{
+    font-size: 20px !important;
+}
+
+.ecofs20 .styleTableDefault.el-table td, 
+.ecofs20 .styleTableDefault.el-table th{
+    font-size: 20px;
+    padding:10px 0px !important;
+}
+
+.ecofs20 .styleTableDefault .taskName{
+    font-size: 18px;
+}
+
+.ecofs20 .styleTableDefault.el-table th.is-leaf{
+    font-size: 20px;
+}
+.ecofs20 .el-pagination button,
+.ecofs20 .el-pagination span:not([class*=suffix]){
+    font-size: 19px;
+}
+.ecofs20 .el-pagination__sizes .el-input .el-input__inner{
+    font-size: 19px;
+}
+
+.ecofs20 .el-form-item__label{
+    font-size: 20px;
+}
+
+.ecofs20 .el-form-item__content{
+    font-size: 20px;
+}
+
+.ecofs20 .el-tabs__item{
+    font-size: 20px;
+}
+
+.ecofs20 .el-button--mini,
+.ecofs20 .el-button--small,
+.ecofs20 .el-button--medium
+{
+    font-size: 18px !important;
+}
+
+.ecofs20 .el-input__inner{
+    font-size: initial;
+}
+
+.ecofs20 .el-checkbox__label{
+    font-size: 20px;
+}
+
+.ecofs20 .el-dropdown{
+    font-size: 20px;
+}
+
+.ecofs20 .el-dropdown-menu--small .el-dropdown-menu__item{
+    font-size: 19px;
+}
+
+.ecofs20 .el-cascader-panel{
+    font-size: 20px;
+}
+
+.ecofs20 .handleDataSheet .handleSearchDesc{
+    font-size: 20px;
+}
+
+.ecofs20 .designFormSettingVue .itemVueName,
+.ecofs20 .ecoSettingDesc .title, 
+.ecofs20 .designDataSheetSettingVue .itemVueName,
+.ecofs20 .designDataSheetSettingVue .ecoSettingDesc .title,
+.ecofs20 .designDataSheetSettingVue .optionsDiv input,
+.ecofs20 .designDataSheetSettingVue .addOptions,
+.ecofs20 .designDataSheetSettingVue .ecoSettingDesc .switchDesc,
+.ecofs20 .designContentVue .moduleDesc
+{
+    font-size: 20px !important;
+}
+
+.ecofs20 .designContentVue .list-group-item{
+    font-size: 19px !important;
+}
+
+.ecofs20 .designTop .leftCol{
+    font-size: 22px;
+}
+
+.ecofs20 .tagSelect .el-tag--mini{
+    font-size:20px ;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>正在登录中</title>
+
+    <script>
+
+      var pathname = window.location.pathname;
+      var _index = pathname.indexOf('loginSso/index.html');
+      if(_index > -1){
+        pathname = pathname.substring(0,_index);
+      }
+      document.write("<script type='text/javascript' src='"+window.location.origin+pathname+"ecoSetting.js?v=" + Date.now() + "'><\/script>");
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

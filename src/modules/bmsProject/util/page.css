@@ -1,0 +1,101 @@
+.el-form-item__label{
+    padding-top:10px;
+    line-height: 20px;
+}
+.infoSpan{
+    border-bottom:1px solid rgb(187, 186, 186);
+    padding-bottom:2px;
+    line-height: 25px;
+    white-space: pre-wrap;
+}
+.tinyInfoSpan{
+  border-bottom:1px solid rgb(187, 186, 186);
+  padding-bottom:1px;
+  color: #606266;
+  white-space: pre-wrap;
+}
+.eventTinyTip{
+  font-size: 9px;
+  color:#909090;
+}
+.eventTitleSpan{
+    color: rgb(107, 106, 106);
+}
+.titleSpan{
+    font-weight: bold;
+    color: rgb(107, 106, 106);
+    line-height: 25px;
+}
+.el-timeline-item__timestamp {
+    color: #808183;
+    line-height: 1;
+    font-size: 15px;
+}
+.attrDialog .el-tabs__item {
+    height: 40px;
+    line-height: 40px;
+}
+.formItemDiv{
+    display:inline-block;
+}
+.el-form-item {
+    margin-bottom: 15px;
+}
+.el-form-item__error {
+  padding-top: 1px;
+}
+.el-upload {
+  width: 100%;
+}
+.el-upload-dragger {
+  width: 100%;
+}
+.trivialDialog .el-dialog{
+    margin-top:65px !important;
+    height:85%;
+    overflow-y: hidden;
+}
+.trivialDialog .el-dialog__body {
+    padding-top:10px;
+    height:calc(100% - 140px);
+    overflow-y: auto;
+    overflow-x:hidden;
+}
+.cardHeader{
+  font-weight:bold;
+  color:rgb(107, 106, 106);
+  font-size:16px;
+}
+.tableInTab td{
+  padding: 5px 0px;
+  vertical-align: top;
+  font-size: 14px;
+}
+.tableInTab th{
+  font-size: 14px;
+}
+.fullScreenDialog .el-dialog{
+  margin-top:5px !important;
+  margin-bottom: 5px !important;
+  height:99%;
+  width: 99%;
+  overflow-y: hidden;
+}
+.fullScreenDialog .el-dialog__body {
+  padding:0px 5px 5px 0px;
+  height:calc(100% - 60px);
+  overflow-y: auto;
+  overflow-x:hidden;
+}
+.tinyMarginLine{
+  margin: 6px 0px 20px 0px;
+}
+.rtBtnDiv{
+  position: absolute;
+  top:0px;
+  right:20px;
+  z-index: 999999;
+}
+.projectInfo .el-tabs__header{
+  margin: 0 0 5px;
+}

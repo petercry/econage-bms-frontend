@@ -1,0 +1,157 @@
+//布局相关变量，在设计原则一致的情况下，全局控制margin,padding等
+@margin0x: 0;
+@margin1x: 8px;
+@margin2x: 16px;
+@margin3x: 24px;
+@margin4x: 32px;
+@margin5x: 40px;
+@margin6x: 48px;
+@margin7x: 56px;
+@margin8x: 64px;
+
+@padding0x: 0;
+@padding1x: 8px;
+@padding2x: 16px;
+@padding3x: 24px;
+@padding4x: 32px;
+@padding5x: 40px;
+@padding6x: 48px;
+@padding7x: 56px;
+//显示省略号
+.com-ellipsis(@max-width:300px,@white-sapce:nowrap,@word-break:break-all,@overflow:hidden,@text-overflow:ellipsis) {
+	max-width: @max-width;
+	white-space: @white-sapce;
+	word-break: @word-break;
+	overflow: @overflow;
+	text-overflow: @text-overflow;
+}
+.border-func() {
+	border: 1px solid @grey4;
+	border-radius: 2px;
+}
+.border-shadow {
+	.border-func();
+	box-shadow: 0px 2px 6px @grey6;
+}
+//各种交互相关颜色的变量，在设计原则一致的情况下，若是交互颜色变化只需要修改变量即可
+
+@blue1: #e8faff;
+@blue2: #bfefff;
+@blue3: #96e1ff;
+@blue4: #6ed1ff;
+@blue5: #45beff;
+@blue6: #1ba5fa;
+@blue7: #0d81d4;
+@blue8: #0260ad;
+@blue9: #004687;
+@blue10: #002f61;
+
+@red1: #fff2f0;
+@red2: #ffe9e6;
+@red3: #ffc3bd;
+@red4: #fa9891;
+@red5: #ed6864;
+@red6: #e03a3a;
+@red7: #ba272c;
+@red8: #941820;
+@red9: #6e0c16;
+@red10: #470710;
+
+@green1: #e8ffe6;
+@green2: #b3ffad;
+@green3: #82f27e;
+@green4: #53e653;
+@green5: #2bd931;
+@green6: #08cc15;
+@green7: #00a611;
+@green8: #008011;
+@green9: #00590f;
+@green10: #00330a;
+
+@yellow1: #feffe6;
+@yellow2: #ffffb8;
+@yellow3: #fffb8f;
+@yellow4: #fff566;
+@yellow5: #ffec3d;
+@yellow6: #fadb14;
+@yellow7: #d4b106;
+@yellow8: #ad8b00;
+@yellow9: #876800;
+@yellow10: #614700;
+
+@orange1: #fff8e8;
+@orange2: #ffe9bf;
+@orange3: #ffd796;
+@orange4: #ffc26e;
+@orange5: #ffab45;
+@orange6: #fa8e1b;
+@orange7: #d46d0d;
+@orange8: #ad4f02;
+@orange9: #873800;
+@orange10: #612500;
+
+@grey1: #ffffff;
+@grey2: #fafafa;
+@grey3: #f5f5f5;
+@grey4: #e8e8e8;
+@grey5: #d9d9d9;
+@grey6: #bebebe;
+@grey7: #8b8b8b;
+@grey8: #595959;
+@grey9: #262626;
+@grey10: #000000;
+
+/* 按钮样式 */
+.ant-btn {
+	padding: 0 16px;
+	height: 32px;
+	line-height: 30px;
+	border-radius: 4px;
+	color: @grey1;
+	background-color: @blue6;
+	border: 1px solid @blue6;
+	font-size: 14px;
+	outline: none;
+}
+.grey-o {
+	color: @grey6;
+	background-color: @grey1;
+	border: 1px solid @grey5;
+	&:hover {
+		color: @blue6;
+		background-color: @grey1;
+		border: 1px solid @blue6;
+	}
+}
+.menu-art-title  {
+	padding-bottom: 16px;
+	border-bottom: 1px solid #e8e8e8;
+}
+.menu-art-name > p  {
+	flex: 1;
+}
+.text-color {
+	color: @orange6;
+}
+.menu-art-name {
+	display: flex;
+	padding-top: 16px;
+	& > p {
+		flex: 1;
+	}
+}
+.menu-art-tit {
+	display: block;
+	min-width: 30px;
+}
+.menu-btn {
+	background: @grey4;
+	margin: 0 2px;
+	// padding: 0 1px;
+	height: 16px;
+	line-height: 16px;
+	border: 1px solid @grey4;
+	border-radius: 2px;
+	font-size: 12px;
+	color: @grey8;
+}

@@ -1,0 +1,30 @@
+{
+  "id": "3096231",
+  "name": "流程图",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "145742",
+      "name": "用户_填充",
+      "font_class": "yonghutianchong",
+      "unicode": "e6a2",
+      "unicode_decimal": 59042
+    },
+    {
+      "icon_id": "2733963",
+      "name": "结束",
+      "font_class": "jieshu",
+      "unicode": "e6ec",
+      "unicode_decimal": 59116
+    },
+    {
+      "icon_id": "5961323",
+      "name": "运行",
+      "font_class": "yunhang",
+      "unicode": "ec61",
+      "unicode_decimal": 60513
+    }
+  ]
+}

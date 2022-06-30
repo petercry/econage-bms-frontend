@@ -1,0 +1,79 @@
+html .ecofs18 {
+    font-size: 18px;
+}
+
+.ecofs18 [class*=custom-] .aside .el-menu-vertical .levelMenu2 .el-submenu__title, 
+.ecofs18 [class*=custom-] .aside .el-menu-vertical .el-menu-item.levelMenu2{
+    height:40px;
+    line-height: 40px;
+}
+
+@media screen and (min-width: 1400px){
+    .ecofs18 .aside .el-menu-vertical .levelMenu1 .el-submenu__title span, 
+    .ecofs18 .aside .el-menu-vertical .el-menu-item.levelMenu1 span,
+    .ecofs18 .aside .el-menu-vertical .levelMenu2 .el-submenu__title span, 
+    .ecofs18 .aside .el-menu-vertical .el-menu-item.levelMenu2 span,
+    .ecofs18 .aside .el-menu-vertical .levelMenu3 .el-submenu__title span, 
+    .ecofs18 .aside .el-menu-vertical .el-menu-item.levelMenu3 span,
+    .ecofs18 .aside .el-menu-vertical .levelMenu4 .el-submenu__title span, 
+    .ecofs18 .aside .el-menu-vertical .el-menu-item.levelMenu4 span{
+      font-size: 18px;
+    }
+}
+
+.ecofs18 .el-menu-vertical .levelMenu3 .el-submenu__title,
+.ecofs18 .el-menu-vertical .el-menu-item.levelMenu3{
+    font-size: 17px;
+}
+
+.ecofs18 .el-tabs__item{
+    font-size: 18px;
+}
+
+.ecofs18 .el-form-item__label{
+    font-size: 18px;
+}
+
+.ecofs18 .el-radio__label{
+    font-size: 18px;
+}
+
+.ecofs18 .wfItem .reqDesc{
+    font-size: 18px !important;
+}
+
+.ecofs18 .fz12{
+    font-size: 16px;
+}
+
+.ecofs18 .el-menu-item{
+    font-size: 18px;
+}
+
+.ecofs18 .el-submenu__title{
+    font-size: 18px;
+}
+
+.ecofs18 .workPlanmodule .itemRow{
+    font-size: 18px !important;
+}
+
+.ecofs18 .calender-date{
+    font-size: 16px !important;
+}
+
+.ecofs18 .e9-block .title{
+    font-size: 19px;
+}
+
+.ecofs18 .homeTitle{
+    font-size: 19px;
+}
+
+.ecofs18 .el-card{
+    margin-bottom:7px;
+}
+
+.ecofs18 .calendar-header{
+    font-size: 16px !important;
+}

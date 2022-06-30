@@ -1,0 +1,3 @@
+export const SET_TEMP_OBJ = 'SET_TEMP_OBJ'
+export const SET_STATUS_MENU = 'SET_STATUS_MENU'
+export const SET_OPERATE_MENU = 'SET_OPERATE_MENU'

@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2821673 */
+  /* Color fonts */
+  src: 
+       url('iconfont.woff2?t=1631946522359') format('woff2'),
+       url('iconfont.woff?t=1631946522359') format('woff'),
+       url('iconfont.ttf?t=1631946522359') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-default:before {
+  content: "\e7fc";
+}
+
+.icon-img:before {
+  content: "\e7fd";
+}
+
+.icon-code:before {
+  content: "\e7fe";
+}
+
+.icon-visio:before {
+  content: "\e7ff";
+}
+
+.icon-music:before {
+  content: "\e802";
+}
+
+.icon-ppt:before {
+  content: "\e803";
+}
+
+.icon-excel:before {
+  content: "\e804";
+}
+
+.icon-pdf:before {
+  content: "\e805";
+}
+
+.icon-text:before {
+  content: "\e806";
+}
+
+.icon-link:before {
+  content: "\e807";
+}
+
+.icon-zip:before {
+  content: "\e808";
+}
+
+.icon-video:before {
+  content: "\e809";
+}
+
+.icon-word:before {
+  content: "\e80a";
+}
+
+.icon-multimedia:before {
+  content: "\e80b";
+}
+
+.icon-visibility:before {
+  content: "\e801";
+}
+
+.icon-download:before {
+  content: "\e800";
+}
+

@@ -1,0 +1,70 @@
+.custom-BLUE .rootVue .ecoHeader{
+  background-color: #0084ff;
+}
+.custom-BLUE .rootVue .ecoHeader .userimg{
+  background-color: #40a2ff;
+}
+.custom-BLUE .rootVue .aside{
+  background-image:none;
+  background-color: #fff;
+  border-right: 1px solid #e8e8e8;
+  box-sizing: border-box;
+}
+
+.custom-BLUE .rootVue .aside .el-menu-vertical  .el-menu-item-group__title{
+  color: #555;
+}
+.custom-BLUE .rootVue .aside .el-menu-vertical .el-submenu__title,
+.custom-BLUE .rootVue .aside .el-menu-vertical .el-submenu__title i,
+.custom-BLUE .rootVue .aside .el-menu-vertical .el-menu-item{
+  color: #555;
+}
+.custom-BLUE .rootVue .aside .el-menu-vertical  .el-submenu__title:hover,
+.custom-BLUE .rootVue .aside .el-menu-vertical .el-menu-item:hover,
+.custom-BLUE .rootVue .aside .el-menu-vertical .el-menu-item.is-active,
+.custom-BLUE .rootVue .aside .el-menu-vertical .el-submenu__title:hover i,
+.custom-BLUE .rootVue .aside .el-menu-vertical .el-menu-item:hover i,
+.custom-BLUE .rootVue .aside .el-menu-vertical .el-menu-item.is-active i{
+  color:#0084ff;
+}
+.custom-BLUE .rootVue .aside .el-menu-vertical .el-submenu__title:hover,
+.custom-BLUE .rootVue .aside .el-menu-vertical .el-menu-item:hover,
+.custom-BLUE .rootVue .aside .el-menu-vertical .el-menu-item.is-active{
+  background-color: #fff;
+}
+
+.custom-BLUEALL .rootVue .ecoHeader{
+  background-color: #0084ff;
+}
+.custom-BLUEALL .rootVue .ecoHeader .userimg{
+  background-color: #40a2ff;
+}
+.custom-BLUEALL .rootVue .aside{
+  background-image:none;
+  background-color: #0084ff;
+  border-right: 1px solid #fff;
+  box-sizing: border-box;
+}
+
+.custom-BLUEALL .rootVue .aside .el-menu-vertical  .el-menu-item-group__title{
+  color: #fff;
+}
+.custom-BLUEALL .rootVue .aside .el-menu-vertical .el-submenu__title,
+.custom-BLUEALL .rootVue .aside .el-menu-vertical .el-submenu__title i,
+.custom-BLUEALL .rootVue .aside .el-menu-vertical .el-menu-item{
+  color: #fff;
+}
+.custom-BLUEALL .rootVue .aside .el-menu-vertical  .el-submenu__title:hover,
+.custom-BLUEALL .rootVue .aside .el-menu-vertical .el-menu-item:hover,
+.custom-BLUEALL .rootVue .aside .el-menu-vertical .el-menu-item.is-active,
+.custom-BLUEALL .rootVue .aside .el-menu-vertical .el-submenu__title:hover i,
+.custom-BLUEALL .rootVue .aside .el-menu-vertical .el-menu-item:hover i,
+.custom-BLUEALL .rootVue .aside .el-menu-vertical .el-menu-item.is-active i{
+  color:#fff;
+}
+.custom-BLUEALL .rootVue .aside .el-menu-vertical .el-submenu__title:hover,
+.custom-BLUEALL .rootVue .aside .el-menu-vertical .el-menu-item:hover,
+.custom-BLUEALL .rootVue .aside .el-menu-vertical .el-menu-item.is-active{
+  background-color: #40a2ff;
+}
+

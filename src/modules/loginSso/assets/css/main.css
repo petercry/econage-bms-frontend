@@ -1,0 +1,139 @@
+/* reset */
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+del,ins,u,s,a,a:hover{text-decoration:none;}
+body{background:#fff;}
+.clearfix { *zoom:1;}
+.clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;font-size:0;}
+i{outline: 0;}
+html{
+  font-family: "PingFang SC","Lantinghei SC","Microsoft YaHei","HanHei SC","Helvetica Neue","Open Sans",Arial,"Hiragino Sans GB","微软雅黑",STHeiti,"WenQuanYi Micro Hei",SimSun,sans-serif;
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.m-header{
+  padding:20px 0 12px 20px;
+  /* height: 30px; */
+  line-height: 0;
+  font-size: 0;
+  background-color: #f8f9fb;
+}
+.m-header span{
+  vertical-align: middle;
+}
+.m-header-tip{
+  display: inline-block;
+  height: 30px;
+  width: 5px;
+  margin-right: 12px;
+}
+.m-header .m-title{
+  line-height: 30px;
+  color: #4a4a4a;
+  font-size: 16px;
+}
+.h-button{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 26px;
+  box-sizing: border-box;
+  margin: 0 6px 0 14px;
+  padding: 2px 10px; 
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #fff;
+}
+.h-button .icon{
+  font-size: 14px;
+  margin-right: 6px;
+}
+.custom-e76f6f .flow-card>.title {
+  background-color: #e76f6f;
+}
+.custom-1ba5fa .flow-card>.title {
+  background-color: #43a4e0;
+}
+.custom-0acab8 .flow-card>.title {
+  background-color: #0acab8;
+}
+.flow-card .el-collapse-item{
+  margin-bottom: 1px;
+}
+.flow-card .el-collapse-item .flow-item{
+  margin-bottom: 0;
+  padding-left: 38px;
+}
+.flow-card .el-collapse-item__header{
+  height: 32px;
+  line-height: 32px;
+  border: none;
+  /* margin-bottom: 1px; */
+  padding-left: 18px;
+  color: #333;
+  background: #f6f6f6;
+  font-size: 14px;
+}
+.flow-card .el-collapse-item__header.is-active{
+  background-color: #fff4de ;
+  color: #f39c4b;
+}
+.custom-e76f6f .el-collapse-item__header.is-active{
+  background-color: #e76f6f44;
+  color: #e76f6fee;
+}
+.custom-1ba5fa .el-collapse-item__header.is-active{
+  background-color: #1ba5fa44 ;
+  color: #1ba5faee;
+}
+.custom-0acab8 .el-collapse-item__header.is-active{
+  background-color: #0acab844 ;
+  color: #0acab8ee;
+}
+.custom-e76f6f .el-collapse-item__header,.custom-e76f6f .flow-item{ border-left:2px solid #e76f6f;}
+.custom-1ba5fa .el-collapse-item__header,.custom-1ba5fa .flow-item{ border-left:2px solid #1ba5fa;}
+.custom-0acab8 .el-collapse-item__header,.custom-0acab8 .flow-item{ border-left:2px solid #0acab8;}
+.flow-item {
+  box-sizing: border-box;
+  height: 26px;
+  line-height: 22px;
+  border: none;
+  margin-bottom: 1px;
+  padding:2px 18px;
+  color: #999;
+  background: #f6f6f6;
+  font-size: 12px;
+}
+.flow-item .flow-wrap{
+  cursor: pointer;
+}
+.flow-item .flow-wrap:hover{
+  background-color: #cce8d3 !important;
+  color: #000;
+}
+.flow-card .el-collapse-item__wrap{
+  border: none;
+}
+.flow-card .el-collapse-item__content{
+  padding: 0;
+}
+.flow-card  .el-collapse-item__arrow{
+  line-height: 32px;
+}

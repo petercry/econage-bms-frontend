@@ -1,0 +1,315 @@
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=5,IE=9" ><![endif]-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grapheditor</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="styles/grapheditor.css">
+	<link rel="stylesheet" type="text/css" href="styles/common.css">
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		// Parses URL parameters. Supported parameters are:
+		// - lang=xy: Specifies the language of the user interface.
+		// - touch=1: Enables a touch-style user interface.
+		// - storage=local: Enables HTML5 local storage.
+		// - chrome=0: Chromeless mode.
+		var urlParams = (function(url)
+		{
+			var result = new Object();
+			var idx = url.lastIndexOf('?');
+
+			if (idx > 0)
+			{
+				var params = url.substring(idx + 1).split('&');
+
+				for (var i = 0; i < params.length; i++)
+				{
+					idx = params[i].indexOf('=');
+
+					if (idx > 0)
+					{
+						result[params[i].substring(0, idx)] = params[i].substring(idx + 1);
+					}
+				}
+			}
+
+			return result;
+		})(window.location.href);
+		function getVertexDescByStyle(style_str) {
+				var return_value = "";
+				if (style_str.indexOf("start.svg") > 0) {
+						return_value = mxResources.get('wf.start');
+				} else if (style_str.indexOf("work.svg") > 0) {
+						return_value = mxResources.get('wf.work');
+				} else if (style_str.indexOf("subprocess.svg") > 0) {
+						return_value = mxResources.get('wf.subprocess');
+				} else if (style_str.indexOf("condition.svg") > 0) {
+						return_value = mxResources.get('wf.condition');
+				} else if (style_str.indexOf("end.svg") > 0) {
+						return_value = mxResources.get('wf.end');
+				} else if (style_str.indexOf("abfinish.svg") > 0) {
+						return_value = mxResources.get('wf.abfinish');
+				} else if (style_str.indexOf("afbot.svg") > 0 || style_str.indexOf("abt_") > 0) {
+						return_value = mxResources.get('wf.afbot');
+				} else if (style_str.indexOf("alphaManual.svg") > 0) {
+						return_value = mxResources.get('wf.alphaManual');
+				} else if (style_str.indexOf("cc.svg") > 0) {
+						return_value = mxResources.get('wf.cc');
+				} else if (style_str.indexOf("metadata.svg") > 0) {
+						return_value = mxResources.get('wf.metadata');
+				} else if (style_str.indexOf("swimlane") > -1) {
+						return_value = '标题';
+				}
+				return return_value;
+		}
+		// Default resources are included in grapheditor resources
+		mxLoadResources = false;
+		mxLanguage = "zh";
+		mxLanguages = ['de', 'it', 'fr','zh'];
+	</script>
+	<script type="text/javascript" src="js/Init.js"></script>
+	<script type="text/javascript" src="deflate/pako.min.js"></script>
+	<script type="text/javascript" src="deflate/base64.js"></script>
+	<script type="text/javascript" src="jscolor/jscolor.js"></script>
+	<script type="text/javascript" src="sanitizer/sanitizer.min.js"></script>
+	<script type="text/javascript" src="js/mxClient.js"></script>
+	<script type="text/javascript" src="js/EditorUi.js"></script>
+	<script type="text/javascript" src="js/Editor.js"></script>
+	<script type="text/javascript" src="js/Sidebar.js"></script>
+	<script type="text/javascript" src="js/Graph.js"></script>
+	<script type="text/javascript" src="js/Format.js"></script>
+	<script type="text/javascript" src="js/Shapes.js"></script>
+	<script type="text/javascript" src="js/Actions.js"></script>
+	<script type="text/javascript" src="js/Menus.js"></script>
+	<script type="text/javascript" src="js/Toolbar.js"></script>
+	<script type="text/javascript" src="js/Dialogs.js"></script>
+</head>
+<body class="geEditor">
+	<script type="text/javascript">
+		var editorUi,addCellTarget,_UNDO,readonlyXml,versionType;
+		var url_ = '/api';
+		var backgroundImageURL = '';
+		// Extends EditorUi to update I/O action states based on availability of backend
+		if(window.sysSetting && window.sysSetting.baseUrl){
+			url_ = window.sysSetting.baseUrl;
+			backgroundImageURL = window.sysSetting.maxgraphBg;
+		}else if(window.parent.sysSetting && window.parent.sysSetting.baseUrl){
+			url_ = window.parent.sysSetting.baseUrl;
+			backgroundImageURL = window.parent.sysSetting.maxgraphBg;
+		}else if(window.parent.parent.sysSetting && window.parent.parent.sysSetting.baseUrl){
+			url_ = window.parent.parent.sysSetting.baseUrl;
+			backgroundImageURL = window.parent.parent.sysSetting.maxgraphBg;
+		}else {
+			url_ = '/api';
+			backgroundImageURL = '';
+		}
+		if(readonlyXml && versionType !== 'huarun'){
+			backgroundImageURL = '1';
+		}
+		// Extends EditorUi to update I/O action states based on availability of backend
+		(function()
+		{
+			$(document).ajaxSend(function(event, jqxhr, settings) {
+				jqxhr.setRequestHeader('eco-auth-token', ecoToken)
+			})
+			var editorUiInit = EditorUi.prototype.init;
+
+			EditorUi.prototype.init = function()
+			{
+				editorUiInit.apply(this, arguments);
+				this.actions.get('export').setEnabled(false);
+
+				// Updates action states which require a backend
+				if (!Editor.useLocalStorage)
+				{
+					// mxUtils.post(OPEN_URL, '', mxUtils.bind(this, function(req)
+					// {
+					// 	var enabled = req.getStatus() != 404;
+					// 	this.actions.get('open').setEnabled(enabled || Graph.fileSupport);
+					// 	this.actions.get('import').setEnabled(enabled || Graph.fileSupport);
+					// 	this.actions.get('save').setEnabled(enabled);
+					// 	this.actions.get('saveAs').setEnabled(enabled);
+					// 	this.actions.get('export').setEnabled(enabled);
+					// }));
+				}
+			};
+
+			// Adds required resources (disables loading of fallback properties, this can only
+			// be used if we know that all keys are defined in the language specific file)
+			mxResources.loadDefaultBundle = false;
+			var bundle = mxResources.getDefaultBundle(RESOURCE_BASE, mxLanguage) ||
+				mxResources.getSpecialBundle(RESOURCE_BASE, mxLanguage);
+			var styleXmlPath =  STYLE_PATH + '/default.xml';
+			if(versionType === 'EASY'){
+				styleXmlPath = STYLE_PATH + '/bpa.xml'
+			}
+
+
+
+			// Fixes possible asynchronous requests
+			mxUtils.getAll([bundle, styleXmlPath], function(xhr)
+			{
+				// Adds bundle text to resources
+				mxResources.parse(xhr[0].getText());
+
+				// Configures the default graph theme
+				var themes = new Object();
+				themes[Graph.prototype.defaultThemeName] = xhr[1].getDocumentElement();
+
+				// Main
+				editorUi = new EditorUi(new Editor(urlParams['chrome'] == '0', themes));
+				editorUi.setPageVisible(false)
+				editorUi.editor.setModified(false);
+				editorUi.hideCurrentMenu();
+				editorUi.editor.graph.setMultigraph(false);
+				editorUi.editor.graph.getCursorForCell = function (cell) {
+						if (cell != null && cell.value != null && cell.vertex == 1) {
+								return 'pointer';
+						}
+				};
+
+				editorUi.editor.graph.setTooltips(true);
+				editorUi.editor.graph.getTooltipForCell = function (cell) {
+					return getCellToolTip(cell);
+				};
+				var clickFlag = true;
+				//给graph绑定点击事件，弹出编辑弹窗
+				editorUi.editor.graph.addListener(mxEvent.DOUBLE_CLICK, function (sender, evt) {
+					if(versionType === 'huarun'){
+						var cell = evt.getProperty('cell');
+						if (cell) {
+							if (cell.isVertex()) {
+								var style = editorUi.editor.graph.getCellStyle(cell);
+								return showDialog(style,cell)
+							}
+						}
+					}	else {
+						clickFlag = false;
+						var cell = evt.getProperty('cell');
+						if(readonlyXml){
+
+							if (cell) {
+									var style = editorUi.editor.graph.getCellStyle(cell);
+									return showDialog(style,cell)
+							}
+						}else{
+							if (cell) {
+								var style = editorUi.editor.graph.getCellStyle(cell);
+								return showDialog(style,cell)
+							}
+						}
+					}
+
+				});
+				editorUi.editor.graph.addListener(mxEvent.CLICK, function (sender, evt) {
+					if(versionType === 'huarun') return;
+					clickFlag = true;
+					var cell = evt.getProperty('cell');
+					let e = evt.getProperty('event');
+					if(!cell || !cell.compType) return hideDialogFixed();
+					if(cell && cell.compType) return putTarget(cell);
+					// setTimeout(function(){
+					// 	if(clickFlag){
+					// 		clickFlag = true;
+					// 		if (cell) {
+					// 				var style = editorUi.editor.graph.getCellStyle(cell);
+					// 				return showDialog(style,cell)
+					// 		}
+					// 	}
+					// },200)
+				});
+				editorUi.editor.graph.addListener(mxEvent.CELLS_ADDED, function (sender, evt) {
+					addCellTarget = evt.getProperty('cells')[0];
+				});
+				//editorUi.editor.setGraphXml('/'+STENCIL_PATH + '/vca.xml');
+				getNode();
+
+			}, function()
+			{
+				document.body.innerHTML = '<center style="margin-top:10%;">Error loading resource files. Please check browser console.</center>';
+			});
+		})();
+		function loadXml(versionType){
+			var req = mxUtils.load(STENCIL_PATH + '/'+ versionType + '.xml');
+			var root = req.getDocumentElement();
+			var dec = new mxCodec(root);
+			editorUi.editor.graph.model.beginUpdate();
+			editorUi.editor.updateGraphComponents();
+			dec.decode(root, editorUi.editor.graph.getModel());
+			editorUi.editor.graph.getModel().endUpdate();
+			editorUi.resetScrollbars();
+		}
+		function exportFile(format,data)
+        {
+					var graph = editorUi.editor.graph;
+          var bg = '#ffffff';
+          var scale = 1;
+          var b = 1;
+
+          var imgExport = new mxImageExport();
+          var bounds = graph.getGraphBounds();
+          var vs = graph.view.scale;
+
+          // New image export
+          var xmlDoc = mxUtils.createXmlDocument();
+          var root = xmlDoc.createElement('output');
+          xmlDoc.appendChild(root);
+
+          // Renders graph. Offset will be multiplied with state's scale when painting state.
+          var xmlCanvas = new mxXmlCanvas2D(root);
+          xmlCanvas.translate(Math.floor((b / scale - bounds.x) / vs), Math.floor((b / scale - bounds.y) / vs));
+          xmlCanvas.scale(scale / vs);
+
+          imgExport.drawState(graph.getView().getState(graph.model.root), xmlCanvas);
+
+          // Puts request data together
+          var w = Math.ceil(bounds.width * scale / vs + 2 * b);
+          var h = Math.ceil(bounds.height * scale / vs + 2 * b);
+
+          var xml = mxUtils.getXml(root);
+          if (bg != null)
+          {
+            bg = '&bg=' + bg;
+          }
+
+          new mxXmlRequest('/api/standard/bpa/view/load', 'filename=export.' + format + '&eco-auth-token='+ ecoToken +'&format=' + format +
+                bg + '&wfCode='+data.wfCode+'&type='+data.type+'&width=' + w + '&height=' + h + '&xml=' + encodeURIComponent(xml)).
+                simulate(document, '_blank');
+        }
+				function getOutPutData(){
+						var graph = editorUi.editor.graph;
+						var bg = '#ffffff';
+						var scale = 1;
+						var b = 1;
+
+						var imgExport = new mxImageExport();
+						var bounds = graph.getGraphBounds();
+						var vs = graph.view.scale;
+
+						// New image export
+						var xmlDoc = mxUtils.createXmlDocument();
+						var root = xmlDoc.createElement('output');
+						xmlDoc.appendChild(root);
+
+						// Renders graph. Offset will be multiplied with state's scale when painting state.
+						var xmlCanvas = new mxXmlCanvas2D(root);
+						xmlCanvas.translate(Math.floor((b / scale - bounds.x) / vs), Math.floor((b / scale - bounds.y) / vs));
+						xmlCanvas.scale(scale / vs);
+
+						imgExport.drawState(graph.getView().getState(graph.model.root), xmlCanvas);
+
+						// Puts request data together
+						var w = Math.ceil(bounds.width * scale / vs + 2 * b);
+						var h = Math.ceil(bounds.height * scale / vs + 2 * b);
+
+						var xml = mxUtils.getXml(root);
+						return {
+							xml:xml,
+							width:w,
+							height:h
+						};
+				}
+	</script>
+</body>
+</html>

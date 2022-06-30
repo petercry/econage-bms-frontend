@@ -1,0 +1,2 @@
+export const SET_DEMO = 'SET_DEMO'
+export const SET_REVISIONTYPE = 'SET_REVISIONTYPE'

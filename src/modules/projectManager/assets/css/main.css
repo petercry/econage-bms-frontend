@@ -1,0 +1,350 @@
+/* reset */
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+del,ins,u,s,a,a:hover{text-decoration:none;}
+body{background:#fff;}
+.clearfix { *zoom:1;}
+.clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;font-size:0;}
+i{outline: 0;}
+html{
+  font-family: "PingFang SC","Lantinghei SC","Microsoft YaHei","HanHei SC","Helvetica Neue","Open Sans",Arial,"Hiragino Sans GB","微软雅黑",STHeiti,"WenQuanYi Micro Hei",SimSun,sans-serif;
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.pointerClass{
+  cursor: pointer;
+}
+html,body{
+  height: 100%;
+}
+body{
+  background: #f5f5f5;
+}
+
+.el-customDiv .el-tag .el-icon-close {
+	font-size: 16px;
+	color: rgba(0, 0, 0, 0.65);
+	right: 0px;
+	position: absolute;
+	top: 3px;
+}
+.treeList .el-tree-node__content{
+  padding: 4px 0;
+  min-height: 26px;
+  height: auto;
+}
+.treeList .custom-tree-node .type-name{
+	white-space: normal !important;
+}
+.el-customDiv {
+	min-height: 34px;
+	line-height: 34px;
+	-webkit-appearance: none;
+	background-color: #fff;
+	background-image: none;
+	border-radius: 4px;
+	border: 1px solid #dcdfe6;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #606266;
+	display: inline-block;
+	font-size: inherit;
+	outline: 0;
+	padding: 0 5px;
+	position: relative;
+	-webkit-transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+	transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+	width: 100%;
+}
+.el-scrollbar{
+	height: 100%;
+}
+.treeMain .el-scrollbar__wrap{
+	overflow-x:hidden;
+}
+/*待办流程(列表页面)*/
+.ecoList.el-table{
+	min-width: 1081px;
+}
+.ecoList.el-table th.is-leaf {
+	background-color: #f5f5f5;
+	color: #0f1419;
+	font-size: 14px;
+	line-height: 14px;
+	height: 50px;
+}
+.ecoList.el-table .has-gutter>tr{
+	background-color: #f5f5f5;
+}
+.ecoList.el-table th.gutter{
+	background-color: #f5f5f5;
+}
+.ecoList.el-table td,.ecoList.el-table th{
+	font-size:14px;
+}
+.eco-tool-title{
+	border-color: #003b90 !important;
+}
+.el-button--text{
+	color:#003b90 !important;
+}
+.el-button--primary {
+	background-color:#003b90 !important;
+	border-color: #003b90 !important;
+}
+.el-input.is-active .el-input__inner, .el-input__inner:focus{
+	border-color: #003b90 !important;
+}
+.el-form-item__label{
+	color:#0f1419 !important;
+}
+.el-input__inner{
+	color:#0f1419
+}
+.el-input__inner::placeholder {
+	color: #ccc;
+}
+ /* 谷歌 */
+.el-input__inner::-webkit-input-placeholder {
+	color: #ccc;
+}
+ /* 火狐 */
+.el-input__inner:-moz-placeholder {
+	color: #ccc;
+}
+ /*ie*/
+ .el-input__inner:-ms-input-placeholder {
+	color: #ccc;
+}
+.el-textarea__inner{
+	color:#0f1419;
+	font-family: Arial;
+}
+.el-textarea__inner::placeholder {
+	color: #ccc;
+}
+ /* 谷歌 */
+.el-textarea__inner::-webkit-input-placeholder {
+	color: #ccc;
+}
+ /* 火狐 */
+.el-textarea__inner:-moz-placeholder {
+	color: #ccc;
+}
+ /*ie*/
+.el-textarea__inner:-ms-input-placeholder {
+	color: #ccc;
+}
+.addOrUpdateProject .addForm .el-form-item__content{
+    width:250px;
+}
+.addOrUpdateProject .addForm .el-select{
+    width:250px;
+}
+.addOrUpdateProject .addForm .allItem .el-form-item__content{
+	width: 643px;
+}
+.addProblem .addForm .el-form-item__content{
+    width:250px;
+}
+.addProblem .addForm .el-select{
+    width:250px;
+}
+.addProblem .addForm .allItem .el-form-item__content{
+	width: 643px;
+}
+.addRisk .addForm .el-form-item__content{
+    width:250px;
+}
+.addRisk .addForm .el-select{
+    width:250px;
+}
+.addRisk .addForm .allItem .el-form-item__content{
+	width: 643px;
+}
+.searchBox{
+    font-size: 14px;
+    padding: 0px 20px;
+    line-height: 50px;
+    background-color: #f5f5f5 ;
+    border-bottom: 1px solid #ddd;
+    min-height:51px;
+}
+.searchBox .state{
+    display: inline-block;
+    width: 160px;
+    margin-right: 10px;
+}
+.searchBox .itemInput{
+    display: inline-block;
+    min-width: 200px;
+    margin-right: 10px;
+}
+.dealCol span:not(:last-child):after{
+	content: " ";
+	border-right: 1px solid #ddd;
+	margin: 0 10px 0 5px;
+}
+.primaryColor{
+	color:#003b90
+}
+.redColor{
+	color:#F56C6C;
+}
+.pinshen .el-col .el-input__inner{
+    text-align: center;
+}
+.pinshen .dimension .el-input{
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+::-webkit-inner-spin-button{
+	-webkit-appearance: none !important;
+	 margin: 0;
+	 -moz-appearance: textfield;
+  }
+ [type="number"] {
+
+	 -moz-appearance: textfield;
+ }
+ .projectManager .tagSelect .el-tag--mini{
+	top: -1px;
+ }
+ .projectManager .el-tabs--border-card>.el-tabs__header{
+	 background: #f5f5f5;
+ }
+ .projectManager .el-tabs--border-card>.el-tabs__header .el-tabs__item{
+	line-height: 40px;
+	height:40px;
+	background: #f5f5f5;
+}
+.projectManager .el-tabs--border-card>.el-tabs__header .el-tabs__item.is-active{
+	color:#003b90;
+	border-bottom:1px solid #003b90;
+	background: #f5f5f5;
+}
+.projectManager .el-tabs--border-card>.el-tabs__header .el-tabs__item:not(.is-disabled).is-active:hover{
+	color:#003b90;
+}
+.projectManager .el-tabs--border-card>.el-tabs__header .el-tabs__item:not(.is-disabled):not(.is-active):hover{
+	color:#003b90;
+}
+.projectCard .milesSetting,.projectCard .roleSetting,.projectCard .groupSetting,.projectCard .majorSetting,.projectCard .deliverList,.projectCard .authorityList,.projectCard .planIndex,.projectCard .taskList{
+	height: 100% !important;
+	top:0px !important;
+	margin:0 !important;
+}
+
+.projectCard .mainTable table td.editable .el-input__inner{
+    border: none;
+    font-size: 14px;
+    color: #666 !important;
+}
+.projectCard .mainTable table td.editable .el-textarea__inner{
+    border: none;
+    font-size: 14px;
+    color: #666 !important;
+}
+.projectCard .mainTable table td.editable .el-customDiv{
+	border: none;
+	font-size: 14px;
+    color: #666 !important;
+}
+.projectCard .mainTable table td.editable .linkDeliver{
+	border: none;
+	font-size: 14px;
+    color: #666 !important;
+}
+.projectCard .authorityList,.projectCard .deliverList,.projectCard .taskList{
+	border:none !important;
+}
+.projectCard .el-scrollbar__bar.is-horizontal{
+	display: block !important;
+}
+
+.updateProblem .mainTable table td.editable .el-input__inner{
+  border: none;
+  font-size: 14px;
+  color: #666 !important;
+}
+
+.updateRisk .mainTable table td.editable .el-input__inner{
+  border: none;
+  font-size: 14px;
+  color: #666 !important;
+}
+
+.detailProblem .mainTable table td.editable .el-input__inner{
+  border: none;
+  font-size: 14px;
+  color: #666 !important;
+}
+
+.detailRisk .mainTable table td.editable .el-input__inner{
+  border: none;
+  font-size: 14px;
+  color: #666 !important;
+}
+.addOrUpdateProject .el-checkbox{
+	margin-right: 20px !important;
+}
+.addOrUpdatePlan .addForm .el-form-item__content{
+	width:calc(100% - 120px);
+}
+.listTab .el-tabs__header{
+	margin: 0px;
+}
+.listTab .el-tabs__nav-wrap::after{
+	height: 0px;
+}
+.projectManager .el-tabs__active-bar{
+	background-color: #003b90;
+}
+.projectManager .el-tabs__item.is-active{
+	color:#003b90;
+}
+.projectManager .el-tabs__item:hover{
+	color: #003b90;
+}
+.el-table__row.red{
+	color:red;
+}
+.projectManager .el-radio-button__orig-radio:checked+.el-radio-button__inner{
+	background-color: #003b90;
+	border-color: #003b90;
+}
+.projectManager .el-radio-button__orig-radio:checked+.el-radio-button__inner:hover{
+	color:#fff;
+}
+.projectManager .el-radio-button__inner:hover{
+	color: #003b90;
+}
+.leftTree .checkbox .el-checkbox__input.is-checked .el-checkbox__inner, .leftTree .checkbox .el-checkbox__input.is-indeterminate .el-checkbox__inner{
+  background-color:#003b90;
+  border-color:#003b90;
+}
+.leftTree .checkbox .el-checkbox__input.is-checked+.el-checkbox__label{
+	color: #003b90;
+	font-weight: 500;
+}
+.updateRecordList .update .last{
+	color: red;
+}

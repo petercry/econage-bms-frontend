@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <title></title>
+    <script>
+      window.sysSetting = {
+          "theme":'BLUEALL',
+          "hidePassLogin":false,//隐藏密码登陆
+          "headTitle":"", //管理页head设置
+          "headLogoShow":true,
+          "headLogoURL":"/static/assets/img/aflogo.png",
+          "headLogoStyle":{
+              "marginTop":'0px'
+          },
+          "togglePosition":'left',
+          "asideType":0, //左侧菜单类型
+          "iconMore":[],
+          "homeType":"webNonePage",
+          "sysAdminRoleId":'HZYH-SYS-ADMIN',
+          "webPlatform":true,
+          "layout":{
+              "asideWidth":210, //左侧菜单宽度
+              "asideHidden":true, //是否隐藏左侧菜单
+          },
+          "settingPage":true,
+          "sessionValidAction":"dialog", //登录失效操作 默认为退出到登录页，dialog为 弹窗
+          "showWFPortalToDoTab":true, //首页待办流程显示 转交待办和征询待办
+          "captchaAesKey":'ob0aPhH3Oy0995zpqAndeA==',//请求令牌，必须按照提前约定的格式发送
+          "userNamePassWordAesKey":'EYXEnH9+QS3Qpxfmg02K5w=='
+      }
+    </script>
+
+    <script>
+        document.write("<script type='text/javascript' src='./ecoSetting.js?v=" + Date.now() + "'><\/script>");
+        document.write("<link rel='stylesheet' href='./ecoStyle.css?v=" + Date.now() + "'><\/link>");
+        if (window.sysSetting.ddEvn){
+            //document.write("https://g.alicdn.com/dingding/dinglogin/0.0.5/ddLogin.js");
+        }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

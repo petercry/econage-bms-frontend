@@ -1,0 +1,83 @@
+html .ecofs20 {
+    font-size: 20px;
+}
+
+.ecofs20 [class*=custom-] .aside .el-menu-vertical .levelMenu2 .el-submenu__title, 
+.ecofs20 [class*=custom-] .aside .el-menu-vertical .el-menu-item.levelMenu2{
+    height:40px;
+    line-height: 40px;
+}
+
+@media screen and (min-width: 1400px){
+    .ecofs20 .aside .el-menu-vertical .levelMenu1 .el-submenu__title span, 
+    .ecofs20 .aside .el-menu-vertical .el-menu-item.levelMenu1 span,
+    .ecofs20 .aside .el-menu-vertical .levelMenu2 .el-submenu__title span, 
+    .ecofs20 .aside .el-menu-vertical .el-menu-item.levelMenu2 span,
+    .ecofs20 .aside .el-menu-vertical .levelMenu3 .el-submenu__title span, 
+    .ecofs20 .aside .el-menu-vertical .el-menu-item.levelMenu3 span,
+    .ecofs20 .aside .el-menu-vertical .levelMenu4 .el-submenu__title span, 
+    .ecofs20 .aside .el-menu-vertical .el-menu-item.levelMenu4 span{
+      font-size: 20px;
+    }
+}
+
+.ecofs20 .el-menu-vertical .levelMenu3 .el-submenu__title,
+.ecofs20 .el-menu-vertical .el-menu-item.levelMenu3{
+    font-size: 19px;
+}
+
+.ecofs20 .el-tabs__item{
+    font-size: 20px;
+}
+
+.ecofs20 .el-form-item__label{
+    font-size: 20px;
+}
+
+.ecofs20 .el-radio__label{
+    font-size: 20px;
+}
+
+.ecofs20 .wfItem .reqDesc{
+    font-size: 20px !important;
+}
+
+.ecofs20 .fz12{
+    font-size: 18px;
+}
+
+.ecofs20 .el-menu-item{
+    font-size: 20px;
+}
+
+.ecofs20 .el-submenu__title{
+    font-size: 20px;
+}
+
+.ecofs20 .workPlanmodule .itemRow{
+    font-size: 20px !important;
+}
+
+.ecofs20 .calender-date{
+    font-size: 18px !important;
+}
+
+.ecofs20 .e9-block .title{
+    font-size: 21px;
+}
+
+.ecofs20 .homeTitle{
+    font-size: 21px;
+}
+
+.ecofs20 .el-card{
+    margin-bottom:4px;
+}
+
+.ecofs20 .el-input__inner{
+    font-size: initial;
+}
+
+.ecofs20 .calendar-header{
+    font-size: 18px !important;
+}

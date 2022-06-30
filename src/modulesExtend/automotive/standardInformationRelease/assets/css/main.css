@@ -1,0 +1,270 @@
+/* reset */
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+del,ins,u,s,a,a:hover{text-decoration:none;}
+body{background:#fff;}
+.clearfix { *zoom:1;}
+.clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;font-size:0;}
+i{outline: 0;}
+html{
+  font-family: "PingFang SC","Lantinghei SC","Microsoft YaHei","HanHei SC","Helvetica Neue","Open Sans",Arial,"Hiragino Sans GB","微软雅黑",STHeiti,"WenQuanYi Micro Hei",SimSun,sans-serif;
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.kn-header {
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  padding-left: 20px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  z-index: 1;
+  background-color: #eee;
+  user-select: none;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+}
+
+.kn-header .eco-action-btn:first-child>.eco-btn-split{
+ border-left:none !important;
+}
+.kn-aside{
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 260px;
+  bottom: 0;
+  background-color:#fff;
+  overflow:scroll;
+  overflow-x: hidden;
+}
+.kn-main{
+  position: absolute;
+  top: 30px;
+  left: 240px;
+  bottom: 0px;
+  right:0;
+  background-color: #f7f7f7;
+  box-sizing: border-box;
+  border-left: 1px solid #ccc;
+}
+.page-main{
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  bottom: 0px;
+  right:0;
+  overflow: auto;
+  padding: 10px 20px;
+}
+.display-input{
+  background-color: #FFF;
+  background-image: none;
+  border-radius: 4px;
+  border: 1px solid #DCDFE6;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #606266;
+  display: inline-block;
+  font-size: inherit;
+  min-height: 34px;
+  line-height: 32px;
+  outline: 0;
+  padding: 0 15px;
+  width: 100%;
+  vertical-align: top;
+}
+.display-input .el-tag{
+  margin-right: 4px;
+}
+
+.el-customDiv {
+	min-height: 34px;
+	line-height: 34px;
+	-webkit-appearance: none;
+	background-color: #fff;
+	background-image: none;
+	border-radius: 4px;
+	/* border: 1px solid #dcdfe6; */
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #606266;
+	display: inline-block;
+	font-size: inherit;
+	outline: 0;
+	padding: 0 5px;
+	position: relative;
+	-webkit-transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+	transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+	width: 100%;
+}
+.updateProject .mainTable table td.editable .el-customDiv{
+	border: none;
+	font-size: 14px;
+  color: #666 !important;
+}
+.el-customDiv .el-tag .el-icon-close {
+	font-size: 16px;
+	color: rgba(0, 0, 0, 0.65);
+	right: 0px;
+	position: absolute;
+	top: 3px;
+}
+
+/* 流程图 */
+.liuchengtu .liuchengtuItem{
+  position: absolute;
+  border:2px solid;
+  box-sizing: border-box;
+  border-color: #409EFF;
+}
+.liuchengtu .liuchengtuItem .icon{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translateY(-50%) translateX(-50%);
+  font-size:30px;
+  color: #409EFF;
+}
+.liuchengtu .liuchengtuItemLable{
+  position: absolute;
+  top: calc(100% + 20px);
+  left:50%;
+  transform: translateX(-50%);
+  width:max-content;
+  color:#606266;
+}
+.liuchengtu .liuchengtuItem.pand .liuchengtuItemLable{
+  transform: rotateZ(-45deg) translateX(16%);
+  width:70px;
+  text-align: center;
+}
+.liuchengtu .liuchengtuItem.startNode,
+.liuchengtu .liuchengtuItem.endNode{
+  border-color: #ccc;
+}
+.liuchengtu .liuchengtuItem.startNode .icon,
+.liuchengtu .liuchengtuItem.endNode .icon{
+  color: #ccc;
+}
+
+.liuchengtu .liuchengtuItem.pand{
+  border-color:#E6A23C;
+  transform: rotateZ(45deg);
+}
+.liuchengtu .liuchengtuItem.pand::after{
+  content: '';
+  position: absolute;
+  width:calc(100% - 15px);
+  height:calc(100% - 15px);
+  top:50%;
+  left:50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #E6A23C;
+
+}
+
+.liuchengtu .liuchengtuLine{
+  position: absolute;
+  height:1px;
+  background-color: #409EFF;
+}
+.liuchengtu .liuchengtuLine::after{
+  content:'';
+  width:0px;
+  height: 0px;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  right:-5px;
+  border:5px  solid transparent;
+  border-left-color: #409EFF;
+  border-left-width:15px;
+
+}
+.liuchengtu .tuihuiLine{
+  position: absolute;
+  border:1px solid #409EFF;
+}
+.liuchengtu .tuihuiLine.bottom{
+  border-top-width:0px;
+  /* transform: rotateX(180deg); */
+}
+.liuchengtu .tuihuiLine.top{
+  border-bottom-width:0px;
+}
+
+
+.liuchengtu .tuihuiLine::after{
+  content:'';
+  width:0px;
+  height: 0px;
+  position: absolute;
+  left:-5px;
+  border:5px  solid transparent;
+}
+.liuchengtu .tuihuiLine.top::after{
+  content:'';
+  border-top-color: #409EFF;
+  border-top-width: 15px;
+  bottom: -5px;
+}
+.liuchengtu .tuihuiLine.bottom::after{
+  content:'';
+  border-bottom-color: #409EFF;
+  border-bottom-width: 15px;
+  top:-5px;
+}
+.liuchengtu .treeNodeLine{
+  position:absolute;
+  background-color: #409EFF;
+}
+.liuchengtu .tuihuiLine.top.borderNode::after,
+.liuchengtu .tuihuiLine.bottom.borderNode::after{
+  content:'';
+  border:none;
+  bottom: 0px;
+}
+.liuchengtu .liuchengtuLineLabel{
+  position: absolute;
+  font-size:14px;
+  color:#606266;
+  top:50%;
+  background-color: #fff;
+  z-index:2;
+  transform: translateY(-50%) translateX(-50%);
+  left:50%;
+}
+.liuchengtu .liuchengtuLineLabel.top{
+  top:0px;
+}
+.liuchengtu .liuchengtuLineLabel.bottom{
+  top:100%;
+}
+.liuchengtu .liuchengtuLineLeft{
+  position: absolute;
+  width: 1px;
+  background-color: #409EFF;
+  height: 100px;
+  left: 0px;
+  top:0px;
+}

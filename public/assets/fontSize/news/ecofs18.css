@@ -1,0 +1,87 @@
+html .ecofs18 {
+    font-size: 18px;
+}
+
+.ecofs18 .eco-tool-title{
+    font-size: 18px !important;
+}
+
+.ecofs18 .styleTableDefault.el-table td, 
+.ecofs18 .styleTableDefault.el-table th{
+    font-size: 18px;
+    padding:10px 0px !important;
+}
+
+.ecofs18 .styleTableDefault .taskName{
+    font-size: 16px;
+}
+
+.ecofs18 .styleTableDefault.el-table th.is-leaf{
+    font-size: 18px;
+}
+.ecofs18 .el-pagination button,
+.ecofs18 .el-pagination span:not([class*=suffix]){
+    font-size: 17px;
+}
+.ecofs18 .el-pagination__sizes .el-input .el-input__inner{
+    font-size: 17px;
+}
+
+.ecofs18 .el-form-item__label{
+    font-size: 18px;
+}
+
+.ecofs18 .el-form-item__content{
+    font-size: 18px;
+}
+
+.ecofs18 .el-tabs__item{
+    font-size: 18px;
+}
+
+.ecofs18 .el-button--mini,
+.ecofs18 .el-button--small{
+    font-size: 16px !important;
+}
+
+.ecofs18 .el-input__inner{
+    font-size: initial;
+}
+
+.ecofs18 .el-checkbox__label{
+    font-size: 18px;
+}
+
+.ecofs18 .el-dropdown{
+    font-size: 18px;
+}
+
+.ecofs18 .el-dropdown-menu--small .el-dropdown-menu__item{
+    font-size: 17px;
+}
+
+.ecofs18 .el-cascader-panel{
+    font-size: 18px;
+}
+
+.ecofs18 .detail-title{
+    font-size: 22px;
+}
+
+.ecofs18 .detail-main{
+    font-size: 22px;
+    line-height:30px;
+}
+
+.ecofs18 .detail-desc{
+    font-size: 21px;
+}
+
+.ecofs18 .newDetail .viewAttachments .imgType{
+    width:18px !important;
+    height:18px !important;
+}
+
+.ecofs18 .newDetail .viewAttachments .fileItem{
+    font-size: 18px !important;
+}

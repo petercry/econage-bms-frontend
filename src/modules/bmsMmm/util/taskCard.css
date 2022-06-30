@@ -1,0 +1,203 @@
+.taskCard{
+    background-color: #ffffff;
+    width: 300px;
+    margin:12px 0;
+    border-radius: 2px;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=4);
+    -moz-box-shadow: 1px 1px 5px #909090;
+    -webkit-box-shadow: 1px 1px 5px #909090;
+    box-shadow:1px 1px 5px #909090;
+    border-left: 4px solid #9d9d9d;
+  }
+  .priority1Card{
+    border-left: 4px solid #d50000;
+  }
+  .priority2Card{
+    border-left: 4px solid #ff9800;
+  }
+  .priority3Card{
+    border-left: 4px solid #2098ee;
+  }
+  .taskCard .headRow{
+    padding: 10px 15px 0px 15px;
+  }
+  .taskCard .headBriefRow{
+    padding: 5px 15px 0px 15px;
+  }
+  .taskCard .headRow .foldBtnDiv{
+    float:right;
+   
+  }
+  .taskCard .headRow .foldBtnDiv .el-button--default{
+    padding: 0px 3px 1px 3px;
+    vertical-align: top;
+    float:right;
+    margin-left:5px;
+  }
+  .taskCard .headRow .foldBtnDiv .el-button--text{
+    padding: 1px 0px 1px 3px;
+    vertical-align: top;
+    float:right;
+    margin-left:5px;
+  }
+  .taskCard .icon{
+    color:#397cfe;
+    font-size: 12px;
+    padding-right:0px;
+    vertical-align: top;
+  }
+  .taskCard .icon .icon-red{
+    color: #ce5c52 ;
+  }
+  .taskCard .icon .icon-green{
+    color: #369a8e ;
+  }
+  .taskCard .icon .icon-grey{
+    color: #747171 ;
+  }
+  .taskCard .seq_num{
+    color: #9f9a9b;
+    font-size: 14px;
+    width:185px; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .taskCard .contentRow{
+    font-family: Microsoft YaHei,PingFangSC-Medium, sans-serif;
+    font-weight: 500;
+    color: #1d1e22;
+    font-size: 14px;
+    padding:8px 15px 0;
+    padding-bottom: 12px;
+    word-wrap: break-word;
+    word-break: normal;
+    white-space: pre-wrap;
+    cursor:pointer;
+  }
+  .taskCard .briefRow{
+    height:10px;
+    overflow-y: hidden;
+  }
+  .taskCard .statusRow{
+    padding: 0px 15px 12px 15px;
+    border-bottom:1px solid #ededed;
+  }
+  .taskCard .statusRow .status{
+    display: inline-block;
+    color: #edfaf3;
+    font-size: 0.5em;
+    border-radius: 2px;
+    padding: 2px 4px;
+  }
+  .taskCard .statusRow .pending{
+    background-color:#ce5c52;
+  }
+  .taskCard .statusRow .working{
+    background-color:#3e71da;
+  }
+  .taskCard .statusRow .selfFinish{
+    background-color:#369a8e;
+  }
+  .taskCard .statusRow .done{
+    background-color:#369a8e;
+  }
+  .taskCard .statusRow .bug{
+    background-color:#e45548;
+  }
+  .taskCard .statusRow .date{
+    display: inline-block;
+    color: #878789;
+    font-size: 12px;
+    background-color: #efeef3;
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin-left:3px;
+  }
+  .taskCard .statusRow .det , .taskCard .headRow .foldBtnDiv .det{
+    color: #878789;
+    font-size: 12px;
+    float: right;
+  }
+  .taskCard .statusRow .det .detIcon , .taskCard .headRow .foldBtnDiv .det .detIcon{
+    color: #409EFF;
+    font-size: 16px ;
+    vertical-align: text-top;
+  }
+  .taskCard .statusRow .det .el-button--small {
+      padding: 2px 4px;
+      border: 0px;
+  }
+  .taskCard .headRow .foldBtnDiv .det .el-button--small{
+    padding: 2px 4px 1px 4px;
+    vertical-align: top;
+  }
+
+  
+  .taskCard .statusRow .sub , .taskCard .headRow .foldBtnDiv .sub{
+    color: #878789;
+    font-size: 12px;
+    float: right;
+  }
+  .taskCard .statusRow .sub .detIcon , .taskCard .headRow .foldBtnDiv .sub .detIcon{
+    color: #878789;
+    font-size: 12px ;
+    vertical-align: middle;
+  }
+  .taskCard .statusRow .sub .detNum , .taskCard .headRow .foldBtnDiv .sub .detNum {
+    color: #878789;
+    font-size: 12px;
+    padding-left: 5px;
+    font-family: "Microsoft YaHei";
+    vertical-align:baseline;
+  }
+  .taskCard .statusRow .sub .el-button--small {
+      padding: 2px 4px;
+  }
+  .taskCard .headRow .foldBtnDiv .sub .el-button--small{
+    padding: 2px 4px 1px 4px;
+    vertical-align: top;
+  }
+
+
+
+  .taskCard .scheduleRow{
+    color: #828282;
+    font-size: 12px;
+    padding: 12px 15px 13px 15px;
+    font-family: "Microsoft YaHei";
+  }
+  .taskCard .scheduleRow .desc{
+    display: inline-block;
+    padding-left:5px;
+  } 
+  .taskCard .scheduleRow .progress{
+    display: inline-block;
+    width: 216px;
+    text-align: right;
+  } 
+  .taskCard .scheduleRow .progress .el-progress__text{
+    font-size:12px!important;
+  }
+  .taskCard .scheduleRow .currRate{
+    display: inline-block;
+  } 
+  .taskCard .scheduleRow .dealerName{
+    display: inline-block;
+    float: right;
+  } 
+  .subTaskDiv{
+    margin:0px 10px 0px 10px;
+    padding:3px;
+    background-color: rgb(220, 220, 224);
+    overflow-y: auto;
+    max-height:700px;
+  }
+  .detInfoDiv{
+    font-size:14px;
+    width:620px;
+    height:500px;
+    overflow: auto;
+  }

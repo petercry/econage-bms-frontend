@@ -1,0 +1,190 @@
+html .ecofs16 {
+    font-size: 16px;
+}
+.ecofs16 .flow-card>.title{
+    font-size: 16px !important;
+    height: 36px;
+    line-height: 36px;
+}
+
+.ecofs16 .flow-card .el-collapse-item__header{
+    font-size: 16px;
+    height: 36px;
+    line-height: 36px;
+}
+
+.ecofs16 .eco-tool-title{
+    font-size: 18px !important;
+}
+
+.ecofs16 .wfStartVue .flow-item{
+    font-size: 16px;    
+    height: 36px;
+    line-height: 36px;
+}
+
+
+.ecofs16 .flowlist.el-table td, .flowlist.el-table th{
+    font-size: 16px;
+    padding:10px 0px !important;
+}
+
+.ecofs16 .flowlist .taskName{
+    font-size: 14px;
+}
+
+.ecofs16 .flowlist.el-table th.is-leaf{
+    font-size: 16px;
+}
+.ecofs16 .el-pagination button, .el-pagination span:not([class*=suffix]){
+    font-size: 15px;
+}
+.ecofs16 .el-pagination__sizes .el-input .el-input__inner{
+    font-size: 15px;
+}
+
+/*启动流程*/
+.ecofs16 .wfStart .cardTitle{
+    font-size: 16px !important;
+}
+.ecofs16 .wfStart .cardTitle .subTitle{
+    font-size: 16px !important;
+}
+.ecofs16 .wfStart .cardCol .cardSubDesc{
+    font-size: 14px;
+}
+.ecofs16 .el-tabs__item{
+    font-size: 16px;
+}
+.ecofs16 .wfStart .quicklist{
+    font-size: 16px !important;
+}
+.ecofs16 .el-button--mini,.ecofs16 .el-button--small{
+    font-size: 14px !important;
+}
+.ecofs16 .h-button{
+    font-size: 14px;
+}
+
+.ecofs16 .m-header .m-title{
+    font-size: 16px;
+}
+
+/*待办流程列表*/
+.ecofs16 .relevanceFlowVue .searchBox{
+    font-size: 16px;
+    height: 105px;
+}
+
+.ecofs16 .relevanceFlowVue .searchBox .searchDesc{
+    width:90px;
+}
+
+/*待办流程详情*/
+.ecofs16 .flowFormVue .el-input__inner{
+    font-size: 16px;
+}
+.ecofs16 .flowFormVue .el-textarea__inner{
+    font-size: 16px;
+}
+.ecofs16 .el-radio__label{
+    font-size: 16px;
+}
+.ecofs16 .flowFormVue .el-checkbox__label{
+    font-size: 16px;
+}
+.ecofs16 .wfDetailToolbar .toolbar{
+    font-size: 16px !important;
+}
+.ecofs16 .wfDetailToolbar .taskDesc{
+    font-size: 14px !important;
+}
+
+.ecofs16 .handelForm .formTitle{
+    font-size: 18px !important;
+}
+
+/*流程查看*/
+.ecofs16 .toview .searchBox{
+    font-size: 16px;
+    height: 105px;
+}
+
+.ecofs16 .toview .searchBox .searchDesc{
+    width:90px;
+}
+
+.ecofs16 .el-input__inner{
+    font-size: initial;
+}
+
+/*流程监控*/
+.ecofs16 .relevanceFlowVue .searchBox .searchDesc{
+    width:80px;
+}
+
+.ecofs16 .el-checkbox__label{
+    font-size: 16px;
+}
+
+/*流程模版*/
+.ecofs16 .el-dropdown{
+    font-size: 16px;
+}
+
+.ecofs16 .el-dropdown-menu--small .el-dropdown-menu__item{
+    font-size: 15px;
+}
+
+.ecofs16 .el-cascader-panel{
+    font-size: 16px;
+}
+
+/*流程设计*/
+.ecofs16 .flowFormStep .ecoStep .el-step.is-simple .el-step__title{
+    font-size: 16px;
+}
+.ecofs16 .designFormSettingVue .itemVueName,
+.ecofs16 .ecoSettingDesc .title,
+.ecofs16 .designFormSettingVue .plainBtn,
+.ecofs16 .designInputSettingVue .itemVueName,
+.ecofs16 .ecoSettingDesc .switchDesc
+{
+    font-size: 16px !important;
+}
+
+.ecofs16 .el-radio-button--small .el-radio-button__inner{
+    font-size: 14px;
+    padding: 9px 12px;
+}
+
+.ecofs16 .designSettingVue .tip{
+    font-size: 12px !important;
+}
+
+.ecofs16 .designForm .formTitle{
+    font-size: 16px !important;
+}
+
+.ecofs16 .el-form-item__label{
+    font-size: 16px;
+}
+
+.ecofs16 .el-form-item__content{
+    font-size: 16px;
+}
+
+.ecofs16 .formContentVue .moduleDesc{
+    font-size: 14px !important;
+}
+.ecofs16 .list-group-item{
+    font-size: 14px !important;
+}
+
+.ecofs16 .flowFormStep .leftCol{
+    font-size: 16px !important;
+}
+
+.ecofs16 .ecoFieldLabel{
+    line-height: 22px !important;
+}

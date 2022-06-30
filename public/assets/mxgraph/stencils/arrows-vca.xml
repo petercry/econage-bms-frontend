@@ -1,0 +1,59 @@
+<shapes name="vca">
+<shape name="流程  " h="60" w="120" aspect="variable" strokewidth="inherit">
+<connections>
+<constraint x="0" y="0.5" perimeter="0" name="W"/>
+<constraint x="1" y="0.5" perimeter="0" name="E"/>
+</connections>
+<background>
+<path>
+<move x="0" y="0"/>
+<line x="105" y="0"/>
+<line x="120" y="30"/>
+<line x="105" y="60"/>
+<line x="0" y="60"/>
+<close/>
+</path>
+</background>
+<foreground>
+<fillstroke/>
+</foreground>
+</shape>
+<shape name="流程 " h="60" w="120" aspect="variable" strokewidth="inherit">
+<connections>
+<constraint x="0" y="0.5" perimeter="0" name="W"/>
+<constraint x="1" y="0.5" perimeter="0" name="E"/>
+</connections>
+<background>
+<path>
+<move x="15" y="0"/>
+<line x="120" y="0"/>
+<line x="120" y="60"/>
+<line x="15" y="60"/>
+<line x="0" y="30"/>
+<close/>
+</path>
+</background>
+<foreground>
+<fillstroke/>
+</foreground>
+</shape>
+<shape name="流程" h="60" w="120" aspect="variable" strokewidth="inherit">
+<connections>
+<constraint x="0" y="0.5" perimeter="0" name="W"/>
+<constraint x="1" y="0.5" perimeter="0" name="E"/>
+</connections>
+<background>
+<path>
+<move x="15" y="0"/>
+<line x="120" y="0"/>
+<line x="120" y="60"/>
+<line x="0" y="60"/>
+<line x="0" y="0"/>
+<close/>
+</path>
+</background>
+<foreground>
+<fillstroke/>
+</foreground>
+</shape>
+</shapes>

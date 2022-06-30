@@ -1,0 +1,236 @@
+body,html{
+  height:100%;
+  font-size: 14px;
+}
+body {
+   font-family: "Microsoft YaHei";
+}
+.trivialDialog .el-dialog{
+  margin-top:20px !important;
+  height:90%;
+  width:98%;
+  overflow-y: hidden;
+}
+.trivialDialog .el-dialog__body {
+  padding-top:10px;
+  height:calc(100% - 170px);
+  overflow-y: auto;
+  overflow-x:hidden;
+}
+.pageTop{
+  display:inline-block;
+  width:100%;
+}
+.pageTop .pageTitle{
+    padding: 10px 10px 5px 20px;
+    font-size: 1.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Liberation Sans", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, SimSun, "WenQuanYi Zen Hei Sharp", sans-serif;
+    font-weight: bold;
+    line-height: 1.33em;
+    text-transform: none;
+    color: rgba(0,0,0,0.8);
+    display:inline-block;
+    white-space: nowrap;
+}
+.pageTop .pageViewChangeDiv{
+  padding: 0px;
+  display:inline-block;
+  float:right;
+}
+.toolbarDiv .dropDownBtn {
+  font-weight:700;
+  letter-spacing:2px;
+  padding:10px 8px;
+  margin-left:1px;
+}
+.pageTop .toolbarDiv{
+  padding: 10px 0px 0px 20px;
+  vertical-align: top;
+}
+.el-header {
+  padding: 0px 2px 0px 20px;
+}  
+.priority1 .el-radio__input.is-checked .el-radio__inner {
+  border-color: #d50000 !important;
+  background: #d50000 !important;
+}
+.priority1.is-bordered.is-checked {
+  color: #d50000 !important;
+  border-color: #d50000 !important;
+}
+.priority1 .el-radio__input.is-checked+.el-radio__label {
+  color: #d50000 !important;
+  font-weight: bold;
+}
+.priority2 .el-radio__input.is-checked .el-radio__inner {
+  border-color: #ff9800 !important;
+  background: #ff9800 !important;
+}
+.priority2.is-bordered.is-checked {
+  color: #ff9800 !important;
+  border-color: #ff9800 !important;
+}
+.priority2 .el-radio__input.is-checked+.el-radio__label {
+  color: #ff9800 !important;
+  font-weight: bold;
+}
+.priority3 .el-radio__input.is-checked .el-radio__inner {
+  border-color: #2098ee !important;
+  background: #2098ee !important;
+}
+.priority3.is-bordered.is-checked {
+  color: #2098ee !important;
+  border-color: #2098ee !important;
+}
+.priority3 .el-radio__input.is-checked+.el-radio__label {
+  color: #2098ee !important;
+  font-weight: bold;
+}
+.el-radio {
+  margin-right: 5px;
+}
+.prioritySearchDiv{
+  -webkit-appearance: none;
+  background-color: #FFF;
+  background-image: none;
+  border-radius: 4px;
+  border: 1px solid #DCDFE6;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #606266;
+  display: inline-block;
+  font-size: inherit;
+  height: 40px;
+  padding:8px 15px;
+  vertical-align:top;
+}
+.prioritySearchDiv .priority1 .el-checkbox__label{
+  color: #d50000;
+  font-size: 18px;
+  font-weight: 900;
+}
+.prioritySearchDiv .priority2 .el-checkbox__label{
+  color: #ff9800;
+  font-size: 18px;
+  font-weight: 900;
+}
+.prioritySearchDiv .priority3 .el-checkbox__label{
+  color: #2098ee;
+  font-size: 18px;
+  font-weight: 900;
+}
+.el-table .hiddenRow{
+  display:none;
+}
+.el-table .tinyRow td{
+  padding: 0px 0px;
+}
+.a-btn{
+  color:#409EFF;
+}
+.pageViewSel{
+  vertical-align:top;
+  display:inline-block;
+}
+.pageViewSel .el-input--suffix{
+  width: 220px;
+}
+.pageViewSel .el-input__inner{
+  font-size: 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Liberation Sans", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, SimSun, "WenQuanYi Zen Hei Sharp", sans-serif;
+  font-weight: bold;
+  line-height: 1.33em;
+  text-transform: none;
+  color: rgba(0,0,0,0.8);
+  width:230px;
+  border:0px;
+  padding-left:0px;
+}
+.headTaskListDiv{
+  margin:0px;
+  padding:0px 0px 0px 10px;
+  background-color: rgb(220, 220, 224);
+  overflow-y: auto;
+  max-height:700px;
+}
+.el-upload {
+  width: 100%;
+}
+.el-upload-dragger {
+  width: 100%;
+}
+.el-drawer__body{
+  overflow-y: auto;
+}
+.loadingClass{
+  background-color: rgba(0, 0, 0, 0.411) !important;
+}
+.loadingClass .el-loading-spinner .el-loading-text {
+  color: rgb(125, 183, 209);
+  margin: 3px 0;
+  font-size: 24px;
+}
+.loadingClass .el-loading-spinner .el-icon-loading{
+  color: rgb(125, 183, 209);
+  margin: 3px 0;
+  font-size: 64px;
+}
+.infoCkDiv{
+  word-wrap: break-word;
+  width: 100%;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+.infoCkDiv img{
+  max-width:100%;height:auto;  
+}
+.head_tag{
+  margin: 15px 15px;
+  padding:10px 30px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.head_tag .tagDiv{
+  display: inline-block;
+}
+.head_tag .title{
+  color: white;
+  font-family: "Microsoft YaHei";
+  font-size: 14px;
+  padding-bottom: 6px;
+}
+.head_tag .num{
+  color: white;
+  font-family: "Microsoft YaHei";
+  font-size: 30px;
+  font-weight:400;
+  padding-left:0px;
+}
+.head_tag .desc{
+  color: white;
+  font-family: "Microsoft YaHei";
+  font-size: 14px;
+}
+.tagSelect .el-customDiv {
+	min-height: 38px;
+	line-height: 38px;
+	-webkit-appearance: none;
+	background-color: #fff;
+	background-image: none;
+	border-radius: 4px;
+	border: 1px solid #dcdfe6;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #606266;
+	display: inline-block;
+	font-size: inherit;
+	outline: 0;
+	padding: 0 5px;
+	position: relative;
+	-webkit-transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+	transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+	width: 100%;
+}
+.detTable .el-table__row .cell {
+  padding : 5px ;
+}

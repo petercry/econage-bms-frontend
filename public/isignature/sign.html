@@ -1,0 +1,368 @@
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>盖章</title>
+    <script type="text/javascript" src="jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="layer/layer.js"></script>
+    <style>
+        .fontSize1 {
+            font-size: 75%;
+            font-family: 宋体;
+        }
+
+        .fontSize2 {
+            font-size: 80%;
+            font-family: 宋体;
+        }
+
+        .fontSize3 {
+            font-size: 85%;
+            font-family: 宋体;
+        }
+
+        .fontSize4 {
+            font-size: 90%;
+            font-family: 宋体;
+        }
+
+        .fontSize5 {
+            font-size: 125%;
+            font-family: 宋体;
+        }
+
+        .fakehlink {
+            cursor: hand;
+            text-decoration: underline;
+            color: #0066CC;
+            font-weight: normal;
+        }
+
+        br {
+            line-height: 8px;
+        }
+        ul,li{
+            list-style: none;
+        }
+        .signatureList>li button:focus{
+            outline: none;
+        }
+        .signatureList{
+            padding: 0;
+            margin: 0;
+            width: 300px;
+        }
+        .signatureList>li{
+            line-height: 25px;
+            min-height: 25px;
+            padding:5px 10px;
+            border-bottom: 1px dashed #888;
+            text-align: center;
+
+        }
+        .signatureList>li:hover{
+            background: #f1f1f1;
+        }
+        .signatureList>li .text{
+            width: 100%;
+            color: red;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .signatureList>li button{
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            color: #3891eb;
+            line-height: 25px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .saveBtn{
+            border: none;
+            color: #FFF;
+            background-color: #409EFF;
+            border-color: #409EFF;
+            display: inline-block;
+            line-height: 1;
+            border:1px solid #409EFF;
+            white-space: nowrap;
+            cursor: pointer;
+            -webkit-appearance: none;
+            text-align: center;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            outline: 0;
+            margin: 0;
+            -webkit-transition: .1s;
+            transition: .1s;
+            font-weight: 500;
+            padding: 9px 15px;
+            border-radius: 3px;
+        }
+        #iWebPDF2018{
+            position: relative;
+        }
+    </style>
+
+</head>
+<script language="javascript">
+    var addin;
+    var filePreviewUrl = "/api/file-manager/safe/preview?mt-token=[mtToken]&file-header-Id=[fileHeaderId]";
+    //var path = "C:/Users/45249/Desktop/test.pdf";
+    var urlJson = url2json(window.location.href);
+    var path;
+    var fileName = decodeURIComponent(urlJson['fileName']);
+	function load() {
+        getPathByFileId(urlJson['fileId']);
+        console.log(path)
+        getSignatureList();
+        
+        iWebPDF2018.iWebPDFFun.ShowMenus = 0;
+			iWebPDF2018.iWebPDFFun.ShowPostil = 0;
+			iWebPDF2018.iWebPDFFun.ShowSigns = 0;
+            iWebPDF2018.iWebPDFFun.ShowTools = 0;
+            iWebPDF2018.iWebPDFFun.ShowMarks = 0;
+            iWebPDF2018.iWebPDFFun.ShowState = 0;
+            iWebPDF2018.iWebPDFFun.ShowTabBarVisible = false;
+            iWebPDF2018.iWebPDFFun.ShowDigitalSignature = 0;
+			iWebPDF2018.iWebPDFFun.ShowSides = 0;
+			
+			
+			for (var i = 0; i < iWebPDF2018.CommandBars.Count; i++) {
+				iWebPDF2018.CommandBars.Item(i).Visible = false;
+			}
+			
+            //打开本地文档
+            
+			var res = iWebPDF2018.iWebPDFFun.WebOpenUrlFile(window.location.origin+path);
+			//alert('res:' + res);
+			
+        
+    }
+	
+	/**
+		签章页面
+	*/
+    function CreateSignature(virtualKeyNumber) {
+		//设置印章keysn
+        var res = iWebPDF2018.iWebPDFFun.SetPublicParam("VirtualKeyNumber", virtualKeyNumber, "");
+		//iWebPDF2018.iWebPDFFun.Alert("res="+res);
+		//正式地址和测试地址不一致
+        //var res1 = iWebPDF2018.iWebPDFFun.SetPublicParam("WebUrl", "http://124.128.84.51:80222/iSignatureServer/OfficeServer.jsp", "");
+        var res1 = iWebPDF2018.iWebPDFFun.SetPublicParam("WebUrl", "http://124.128.84.51:8001/iSignatureServer/OfficeServer.jsp", "");
+		//iWebPDF2018.iWebPDFFun.Alert("res1="+res1);
+		/*
+		0: 弹出盖骑缝章窗口
+		1: 弹出电子签章窗口
+		3: 弹出手写签名窗口
+		4: 弹出批量验证窗口
+		5: 弹出二维条码窗口
+		7: 弹出光学防伪窗口
+		*/
+        var res2 = iWebPDF2018.iWebPDFFun.ShowSignDlg(1);
+    }
+	function doConfirm_t(){
+        $("#iWebPDF2018").css("top","80px");
+        layer.confirm('是否确定盖章？',{
+            offset: 't',
+            title: false,
+            closeBtn:0,
+            shade:0
+        }, function(index){
+            layer.close(index);
+            doConfirm();
+        }, function(index){
+            $("#iWebPDF2018").css("top","0px");
+        }); 
+       
+    }
+	
+	function doConfirm() {
+        
+       
+            $("#iWebPDF2018").css("top","0px");
+            var tmpPath = "c:\\signature_temp.pdf";
+            //保存本地文件
+            var resSave = iWebPDF2018.iWebPDFFun.WebSaveLocalFile(tmpPath);
+            if (resSave) {
+                if(iWebPDF2018.iWebPDFFun.isOpen) {
+                    iWebPDF2018.iWebPDFFun.WebClose();
+                }
+                var resOpen = iWebPDF2018.iWebPDFFun.WebOpenLocalFile(tmpPath);
+                var res = iWebPDF2018.iWebPDFFun.GetFileBase64("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=");  
+                var xhr = new XMLHttpRequest();
+                var fileBlob = dataToFile(res.replace('GetFileBase64:',''));
+                var url = "/api/file-manager/uploader/chunk/save/WF_ATTACHMENT?fileId="+urlJson['fileId']+"&name="+fileName+"&chunk=0&chunks=1&time="+new Date().getTime();
+                xhr.open('post', url, false);
+                xhr.setRequestHeader("content-type", "application/octet-stream");
+                xhr.setRequestHeader("eco-auth-token",getToken());
+            
+                xhr.onload = function(){
+                    if(xhr.status == 200){
+                        console.log('分块上传完成');
+                        updateServerFile();
+                    }
+                };
+                xhr.send(fileBlob);
+            }
+        
+		//关闭窗口
+		//window.close();
+    }
+    function updateServerFile(){
+        var xhr = new XMLHttpRequest();
+        var $formData = new FormData();
+        var uploadUrl ="/api/file-manager/uploader/chunk/merge/WF_ATTACHMENT?modularInnerId="+urlJson['modelInnerId'];
+		xhr.open( 'POST', uploadUrl, true );
+        $formData.append( 'fileId', urlJson['fileId']);
+        $formData.append( 'targetFileName', fileName );
+        $formData.append( 'replaceFileHeaderId',urlJson['fileId']);
+        $formData.append( 'time',new Date().getTime() );
+        xhr.setRequestHeader("eco-auth-token",getToken());
+        xhr.send( $formData );
+        xhr.onload = function(){
+            if(xhr.status == 200){
+                alert('盖章成功！');
+                window.close();
+            }
+        }
+    }
+    var base64HeaderRegExp = /\s/g;
+    function dataToFile( data ) {
+		var base64str =data
+
+        // decode base64 string, remove space for IE compatibility
+        var binary = atob(base64str.replace(/\s/g, ''));
+        var len = binary.length;
+        var buffer = new ArrayBuffer(len);
+        var view = new Uint8Array(buffer);
+        for (var i = 0; i < len; i++) {
+            view[i] = binary.charCodeAt(i);
+        }
+
+        // create the blob object with content-type "application/pdf"               
+        var blob = new Blob( [view], { type: "application/pdf" });
+        return blob;
+	}
+
+	function url2json(url){
+        var index = -1,
+            str = '',
+            arr = [],
+            length = 0,
+            res = {};
+        if(url.indexOf('?')!=-1){
+            index = url.indexOf('?');
+            str = url.substring(index+1);
+            arr = str.split('&');
+            length = arr.length;
+            for(var i=0; i<length; i++){
+                res[arr[i].split('=')[0]] = arr[i].split('=')[1];
+            }
+        }else{
+            res = {};
+        }
+        return res;
+    }
+    function getToken() {
+        var token = sessionStorage.getItem("ecoToken");
+        if (!token) {
+            token = localStorage.getItem("ecoToken");
+        }
+        if(!token || token == "null" || token == "underfind"){
+            token = urlJson['ecoToken'];
+        }
+        return token;
+    }
+    function getSignatureList(){
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', "/api/seal/kg/detail/self-list", false);
+        xhr.setRequestHeader("eco-auth-token",getToken());
+        xhr.onload = function(){
+            if(xhr.status == "200"){
+               var data = JSON.parse(xhr.response);
+               var rows = data.rows;
+               var $signature_ul = $("#signatureList");
+               for(var i = 0;i<rows.length;i++){
+                    var $signature_li = $('<li></li>');
+                    var $select_btn = $("<button type='button'>选 择</button>");
+                    var $text_span = $("<span class='text'></span>")
+                    var item = rows[i];
+                    $signature_li.attr("attrId",item.keySn);
+                    $signature_li.attr("title",item.name);
+                    $text_span.html(item.name);
+                    $text_span.appendTo($signature_li);
+                    $select_btn.appendTo($signature_li);
+                    $select_btn.on('click',function(){
+                        CreateSignature($(this).parent().attr("attrId"));
+                    })
+                    $signature_ul.append($signature_li);
+               }
+            }
+            
+        }
+        xhr.onerror = function(e){
+            console.log(e);
+            alert('网络错误')
+        }
+        xhr.send();
+    }
+    function getPathByFileId(fileId){
+        if(!fileId) return alert('不存在的文件');
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', "/api/file-manager/download-tmp-token", false);
+        xhr.setRequestHeader("eco-auth-token",getToken());
+        xhr.onload = function(){
+            if(xhr.status == "200"){
+                path = filePreviewUrl.replace('[mtToken]',xhr.response).replace('[fileHeaderId]',fileId);
+            }
+            
+        }
+        xhr.onerror = function(e){
+            console.log(e);
+            alert('网络错误')
+        }
+        xhr.send();
+       
+    }
+</script>
+
+
+<body onload="load()" bgcolor="#ffffff" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+	
+	<TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" align=center border=1>
+        <!-- Load a Document -->
+        <TR>
+            <TD align=center><FONT color=red><B>印章列表</B></FONT></TD>
+            <TD width="100%" height="5%" align=center><FONT color=red><B>预览区域</B></FONT></TD>
+        </TR>
+		<TR>
+            <TD vAlign=top align=right style="width: 300px;max-width: 300px;">
+                <TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
+                    <TR>
+                        <TD vAlign=top align=left>					
+							<!-- <span onclick="CreateSignature('3701170000164')">印章(3701170000164)</span><br/>
+							<span onclick="CreateSignature('3701177503930')">印章(3701177503930)</span><br/>
+							<span onclick="CreateSignature('3701177504631')">印章(3701177504631)</span><br/>
+							<button onclick="confirm()" >确定</button>
+                             -->
+                             <ul id="signatureList" class="signatureList">
+                                
+                             </ul>
+                             <div style="text-align:center;padding: 10px 10px;">
+                                <button onclick="doConfirm_t()" class="saveBtn" >确认盖章</button>
+                            </div>
+							 
+                        </TD>
+                    </TR>
+                </TABLE>
+            </TD>
+            <td id="plugin" valign="top" border="1">
+                <script type="text/javascript" src="iWebPDF2018.js"></script>
+            </td>
+        </TR>
+	</TABLE>
+</body>
+</html>
