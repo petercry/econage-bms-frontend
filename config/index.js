@@ -5,8 +5,8 @@
 const path = require('path')
 const allocation = {
     index: 'index.html',
-    template:'src/modules/bmsBa/index.html',        /* index.html 入口地址 */
-    entry:'./src/modules/bmsBa/main.js',            /* 入口main 路径 */
+    template:'src/modules/bmsProject/index.html',        /* index.html 入口地址 */
+    entry:'./src/modules/bmsProject/main.js',            /* 入口main 路径 */
     assetsPublicPath:'./', /* 打包地址 */
 }
 
